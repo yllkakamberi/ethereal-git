@@ -8,7 +8,7 @@
 
 </head>
 <style>
-    container {
+    .container {
       position: relative;
       width: 100%;
 padding: 20px; 
@@ -43,6 +43,78 @@ justify-content: space-evenly;   }
 
     }
     
+    .container-ss {
+      display: flex;
+    }
+
+    .left-box {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .left-box p {
+      margin-bottom: 0;
+    }
+
+    .right-box {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .right-box img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 10px;
+    }
+    #service-heading{
+        margin-top: 45px;
+    font-size: 22px;
+    font-family: monospace;
+    color: rgb(165, 94, 106);
+}
+#service-textp{
+    text-align: left;
+    font-size: 15px;
+    font-family: classico-urw;
+    font-weight: 600;
+    color: rgb(52, 50, 50);
+    line-height: 2;
+}
+.right-box{
+    width: 1500px;
+}
+.right-box img{
+    border-radius: 7px;
+}
+.container-ss{
+    margin: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container-ss {
+        width: 100%;
+    }
+
+    #service-heading {
+        font-size: 22px;
+    }
+
+    #service-textp {
+        font-size: 15px;
+    }
+}
+
+
+
     
 </style>
 
@@ -105,11 +177,39 @@ justify-content: space-evenly;   }
     </div>
   </div>
 
+  <div class="container-ss">
+    <div class="left-box">
+      <h2 id="service-heading">design & coordination
+    </h2>
+      <p id="service-textp">
+        In the domain of design and coordination, we seamlessly blend creativity and precision. Our design services bring aesthetic brilliance to every detail, while our meticulous coordination ensures flawless execution of logistics. Collaborating closely with you, our team creates a personalized and visually captivating event. From decor to vendor management, we handle every aspect, allowing you to focus on enjoying the moment. The result is a harmonious and unforgettable experience where creativity meets seamless execution.</p>
+    </div>
+    <div class="right-box">
+      <img src="img/service-2.png" alt="Your Image">
+    </div>
+  </div>
+  <div class="container-ss">
+    <div class="left-box">
+      <h2 id="service-heading">event managment</h2>
+      <p id="service-textp">Our event management services are tailored to suit various occasions, be it weddings, corporate events, or special celebrations. We leverage our expertise to curate an event that reflects your vision, taking care of the nitty-gritty details so you can focus on the celebration itself. With a commitment to excellence, we transform your ideas into a flawlessly executed reality, creating lasting memories for everyone involved.
 
-
-
-
-
+      </p>
+    </div>
+    <div class="right-box">
+      <img src="img/service-3.png" alt="Your Image">
+    </div>
+  </div>
+  <div class="container-ss">
+    <div class="left-box">
+      <h2 id="service-heading">elopements & destination</h2>
+      <p id="service-textp">
+        Specializing in elopements and destination events, we curate intimate and unforgettable experiences tailored to your unique love story. For elopements, we focus on the essence of your connection, creating an intimate celebration that reflects your personalities and the love you share. Our destination event services extend beyond borders, ensuring a seamless and magical experience in the location of your dreams.</p>
+    </div>
+    <div class="right-box">
+      <img src="img/service-4.png" alt="Your Image">
+    </div>
+  </div>
+  
 
 
 
