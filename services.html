@@ -11,16 +11,16 @@
     .container {
       position: relative;
       width: 100%;
-padding: 20px; 
-display: flex;
-justify-content: space-evenly;   }
-
+      padding: 20px; 
+      display: flex;
+      justify-content: space-evenly;   }
+/*fotoja main*/
     .image {
       width: 100%;
       height: auto;
       display: block;
     }
-
+/*teksti mbi*/
     .text-overlay {
       position: absolute;
       top: 50%;
@@ -32,7 +32,8 @@ justify-content: space-evenly;   }
       font-family:  monospace;
       font-weight: bold;
     }
-    #h2-s{
+    
+    #h2-services{
         text-align: center;
         font-family: monospace;
         font-weight: 600;
@@ -43,8 +44,9 @@ justify-content: space-evenly;   }
 
     }
     
-    .container-ss {
+    .container-services-description {
       display: flex;
+      margin: 40px;
     }
 
     .left-box {
@@ -89,18 +91,17 @@ justify-content: space-evenly;   }
     color: rgb(52, 50, 50);
     line-height: 2;
 }
+/*fotoja*/
 .right-box{
     width: 1500px;
 }
 .right-box img{
     border-radius: 7px;
 }
-.container-ss{
-    margin: 40px;
-}
+
 
 @media only screen and (min-width: 768px) {
-    .container-ss {
+    .container-services-description {
         width: 100%;
     }
 
@@ -133,11 +134,12 @@ justify-content: space-evenly;   }
         </ul>
     </nav>
 </header>
-
 <div class="container">
     <img src="img/services-home.png" alt="Your Photo" class="image">
     <div class="text-overlay">We’re so happy you're here + would love to tell you a bit more about Ethereal Events.</div>
   </div>
+
+  <h2 id="h2-services">-OUR SERVICES|PLANNING|COORDINATION-</h2>
 
   <div class="our-services">
     <div class="ss1">
@@ -153,7 +155,7 @@ justify-content: space-evenly;   }
   </h2><p id="ss2-txt">Celebrate love in a grand symphony with our weddings. We weave together traditions and modernity to create a joyous union, crafting memories that resonate with your unique story.</p>
   </div>
   
-  <div class="ss3">
+  <div class="ss3"> 
   <img src="img/ss3.png" alt=""> <br>
   <h2>
     STYLED SHOOTS
@@ -164,7 +166,7 @@ justify-content: space-evenly;   }
 
 
 
-  <div class="container-ss">
+  <div class="container-services-description">
     <div class="left-box">
       <h2 id="service-heading">full service planning+design</h2>
       <p id="service-textp">In the realm of full-service event planning and design, we transform your vision into reality, handling every detail from logistics to creative elements. Our meticulous approach ensures a stress-free experience, allowing you to relish the anticipation and joy of your celebration. From venue selection to vendor coordination, we curate every aspect for a uniquely tailored event. Entrust us to navigate complexities and bring your vision to life, so you can fully enjoy the magic of the moment.</p>
