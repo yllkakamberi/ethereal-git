@@ -8,17 +8,16 @@
 </head>
 <style>
     
-body{
+    body{
     margin: 0;
     padding: 0;
     background-image: url(background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family : Verdana,Tahoma, sans-serif;
-    
-}
+ }
 
-.box{
+    .box{
     width: 380px;
     height: 500px;
     background-color: rgb(196, 208, 196);
@@ -29,30 +28,27 @@ body{
     box-sizing: border-box;
     flex-direction: column;
     border-radius: 8px;
-    
 }
-
-.box img{
+    
+    .box img{
     width:100px;
     margin-top:-50px ;
-}
+ }
 
-.header {
+    .header {
     width: 300px;
     height: 50px;
     text-transform: uppercase;
     display: inline-flex;
     padding-top: 10px;
-   
     justify-content: space-between;
 }
 
-.header a {
+    .header a {
     font-size: 18px;
     text-decoration: none;
     color: #353232;
     font-family: monospace;
-
     display: inline-flex;
     padding-left: 25px;
     padding-right: 25px;
@@ -60,34 +56,34 @@ body{
     justify-content: center;
     cursor:pointer;
     border-radius: 8px;
-}
+ }
 
-.header .active {
+    .header .active {
     color: #e6ede7;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
+    
 }
 
-.header .active:after {
+    .header .active:after {
     position: absolute;
     border: none;
     content: "";
 }
 
-#errorMsg{
+    #errorMsg{
     color:red;
     text-align: center;
     font-size: 12px;
     padding-bottom: 20px;
-
 }
 
-.content{
+    .content{
     display: inline-flex;
     overflow: hidden;
 }
 
-form {
+    form {
     position: relative;
     display: inline-flex;
     width: 100%;
@@ -97,7 +93,7 @@ form {
     transition: right 0.5s;
 }
 
-.login a{
+    .login a{
     text-decoration: none;
     color: #ffffff;
     font-size: 15px;
@@ -106,11 +102,11 @@ form {
 
 }
 
-.extend form {
+    .extend form {
     right: 100%;
 }
 
-input[type=text], input[type=password], input[type=email]{
+    input[type=text], input[type=password], input[type=email]{
     display:block;
     position: relative;
     border: 1px solid #ffffff;
@@ -124,41 +120,41 @@ input[type=text], input[type=password], input[type=email]{
     font-family: monospace;
 }
 
-input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
-    border: 4px solid #043a19;
+    input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border: 1px solid rgb(2, 24, 2);
 
 }
 
-input[type=submit]{
+    input[type=submit]{
     display:block;
     position: relative;
     border: 3px solid #ebd7f1;
     padding: 12px;
     margin-bottom: 20px;
     width: 100%;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color:rgb(5, 53, 21) ;
     text-align:center;
-    font-size: 20px;
-    color: #ffffff;
+    font-size: 15px;
+    color: white;
     cursor:pointer;
     outline: none;
     font-family: monospace;
 
 }
     
-input[type=submit]:hover{
-     background-color:#ffffff;
-     color: #000000;
+    input[type=submit]:hover{
+     background-color:white;
+     color: black;
      
 }
-input[type=checkbox]{
+    input[type=checkbox]{
     background-color:#df80ff;
 }
-#check{
+    #check{
     margin-top: 10px;
     text-align: left;
-    color: #ffffff;
+    color: white;
     font-size: 15px;
 }
 
@@ -209,8 +205,39 @@ input[type=checkbox]{
                 </form>
             </div>
         </div>
-    </div>
+    </div> <br>
+    <br>
+    <footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="section categories">
+                    <h2>Navigation</h2>
+                    <div class="kategorite">
+                      <a href="about.html"><p>About</p></a>
+                      <a href="services.html"> <p>Services</p></a>
+                      <a href="gallery.html"> <p>Gallery</p></a>
+                      <a href="contact.html">  <p>Contact</p></a>
+                      <a href="login.html"> <p>Log-in</p></a>
+                    </div>
+                </div>
 
+               
+        
+                <div class="section contact-us">
+                    <h2>Contact Us</h2>
+                    <div class="contact-info">
+                        <p>Phone: <span>+383 443-212-612</span></p>
+                        <p>Email: <span>etherealevents@gmail.com</span></p>
+                        <p>Address: <span>Seattle,near Pike Place Market</span></p>
+                    </div>
+                    <textarea placeholder=" your message to us..."></textarea>
+                </div>
+                
+                <div class="footer-copyright">
+              <p>© 2023 ETHEREAL EVENTS. | FOREVER BEGINS WITH US </p>
+            </div>
+        </div>
+    </footer> 
 </script>
 </body>
 
