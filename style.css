@@ -440,7 +440,7 @@ section {
 
       
 footer {
-  background-color: #333;
+  background-color: #5a5a5a;
   color: #ddd;
   padding: 20px 0; 
 }
@@ -454,9 +454,16 @@ footer {
   flex-basis: 25%; 
   margin-bottom: 20px;  
 }
-.kategorite p{
-  color: white;
+.kategorite {
+  font-style: normal;
+  color: whitesmoke;
+  
+}
+.kategorite a:hover{
+  font-style: italic;
+  color: rgb(208, 239, 97);
+  
 }
 .contact-info p{
-  color: white;
+  color: rgb(249, 249, 249);
 }
