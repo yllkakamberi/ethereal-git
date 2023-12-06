@@ -39,17 +39,16 @@
           <img src="img/f3.png" style="width:100%">
         </div>
       
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
-      
+
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
       <script>
+
         let slideIndex = 0;
       showSlides();
       
@@ -62,13 +61,14 @@
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}
         slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        setTimeout(showSlides, 2000); 
       }
       </script>
       
-      <div class="question">
+      
+      <div class="question-section">
       <h2>-LOOKING FOR THE PERFECT WEDDING PLANNER?-</h2>
-        <div class="about-services">
+        <div class="question-text">
       <p id="question-paragraph"> 
           Are you in search of the perfect wedding planner to transform your dream day into  <br>a flawless reality? <br> <br> Look no further. At Ethereal Events, we understand that your wedding is a  <br>once-in-a-lifetime celebration, and we are dedicated to making it an extraordinary experience.  <br>Our team of experienced and passionate wedding planners is committed to crafting personalized <br> and enchanting celebrations tailored to your unique love story. <br> <br> From meticulously planning every detail to ensuring a seamless execution on your special day,  <br>we are here to turn your vision into a magical reality. <br>  <br>Let us be your guiding hand in creating memories that last a lifetime. <br> Choose Ethereal Events for a wedding day that surpasses all expectations.. 
       </p><br>
@@ -77,15 +77,15 @@
       </div>
       
       
-      <div class="container-s">
-        <img src="img/after-s.png" alt="Your Photo" class="image-s">
-        <div class="text-over">More of our services-take a look at our portofolio here. <br>
+      <div class="container-servicesimg">
+        <img src="img/after-s.png" alt="Your Photo" class="image-top-services">
+        <div class="text-overlay-services">More of our services-take a look at our portofolio here. <br>
           <a href="services.html"><input type="submit" value="SERVICES" id="services-button"></a>
         </div>
       </div>
       
       
-      <div class="services-main">
+      <div class="our-services">
         <div class="ss1">
       <img src="img/ss1.png" alt=""> <br>
       <h2>ELOPEMENTS</h2>
@@ -111,9 +111,7 @@
       
       <div class="ceo">
         <p id="read-about">-READ MORE ABOUT US-</p>
-       <a href="about.html"><input type="submit" value="ABOUT" class="about-btn"></a> 
-      
-      
+       <a href="about.html"><input type="submit" value="ABOUT" class="about-button"></a> 
       </div>
       <div class="thecouple">
           <div class="ceo-container">
@@ -147,7 +145,7 @@
       
 
 
-
+<!--
 
     <footer class="footer">
 
@@ -186,6 +184,38 @@
          </footer>
        
        
-
+        -->
+        <footer>
+            <footer class="footer">
+                <div class="container">
+                    <div class="section categories">
+                        <h2>Navigation</h2>
+                        <div class="kategorite">
+                            <p>About</p>
+                            <p>Services</p>
+                            <p>Gallery</p>
+                            <p>Contact</p>
+                            <p>Log-in</p>
+                        </div>
+                    </div>
+            
+                    <div class="section contact-us">
+                        <h2>Contact Us</h2>
+                        <div class="contact-info">
+                            <p>Phone: <span>+383 443-212-612</span></p>
+                            <p>Email: <span>etherealevents@gmail.com</span></p>
+                            <p>Address: <span>Seattle,near Pike Place Market</span></p>
+                        </div>
+                        <textarea placeholder=" your message to us..."></textarea>
+                    </div>
+                    
+          
+                    
+            
+                <div class="footer-copyright">
+                  <p>© 2023 ETHEREAL EVENTS. | FOREVER BEGINS WITH US </p>
+                </div>
+            </div>
+        </footer>  
     </body>
     </html>
