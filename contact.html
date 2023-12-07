@@ -4,74 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>The Gathering Co.</title>
+    <title>Contact</title>
 </head>
 <style>
-    .footer-nav ul{
-        text-align: center;
-     }
-     .footer-subscribe h2{
-        margin-left: 120px;
-     }
-     .footer-nav p{
-        margin-left: 52px;
-     }
-     .footer-about h2{
-        margin-left: 286px;
-     }
-     .footer-about p{
-      text-align: center;
-     }
+  /*fotoja team ,left side*/
+   .contact-image img{
+    width: 400px;
+    height: 530px;
+   }
+   /*teksti posht fotos*/
+   p{
+    font-size: 15px;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ /*paragrafet posht the team photo*/
+ #par1 {
+    font-family: monospace;
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: rgb(42, 41, 41);
+    margin-bottom: 8px;
+}
+#par2{
+    font-size: 19px;
+    color: rgb(43, 43, 42);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+#par3{
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(75, 74, 74);
+    font-weight: bold;
+    line-height: 2;
+}
+  /*per gjith formen*/
+     form{
+    margin-left: 30px;
+    margin-bottom: 30px;
+ }
+ .formdisplay{
+    display: flex;
+    margin-left: 120px;
+ }
+ /*inputat*/
    input{
     height: 38px;
     background-color: #fffff3;
     border: 1px solid rgb(164, 155, 155);
     margin-right:10px ;
    }
-   p{
-    font-size: 15px;
-   }
-   label{
-    font-size: 12px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   }
-   .contact-image img{
-    width: 400px;
-    height: 530px;
-   }
- .formdisplay{
-    display: flex;
-    margin-left: 120px;
- }
- form{
-    margin-left: 30px;
- }
- textarea{
-    background-color: #fffff3;
-    border: 1px solid rgb(164, 155, 155);
- }
- .inputatbashk{
+   .both-names{
     display:flex;
  }
  .form-fistname{
     display: block;
  }
- .fbs{
-    display: flex;
- }
- p{
+
+   label{
+    font-size: 12px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- }
- select{
-    height: 38px;
-    background-color: #fffff3
+   }
+  
+ textarea{
+    background-color: #fffff3;
+    border: 1px solid rgb(164, 155, 155);
  }
 
+/*tekti mbi textarea*/
 #littletext{
     font-size: 10px;
     color: rgb(105, 106, 106);
 }
-.submittt{
+/*sumbit butoni*/
+.submittt-button{
   padding: 11px;
     font-family: monospace;
     font-weight: 600;
@@ -82,31 +91,45 @@
     margin-top: 20px;
     font-size: 14px;
 }
-#cantwaitt {
-    font-family: monospace;
-    font-size: 27px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: rgb(42, 41, 41);
-    margin-bottom: 8px;
+/*select dropdown*/
+select{
+    height: 38px;
+    background-color: #fffff3
+ }
+
+ /*reponsive*/
+ @media only screen and (max-width: 1024px) {
+    .formdisplay {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-image img {
+        width: 100%; /* Make the image take up 100% of the width */
+        height: auto; 
+        border-radius: 9px; 
+    }
+
+    .form {
+        margin-left: 0; 
 }
-#loc{
-    font-size: 19px;
-    color: rgb(43, 43, 42);
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    margin-bottom: 8px;
+
+/* Media query for 768px screens */
+@media only screen and (max-width: 768px) {
+    .both-names {
+        flex-direction: column;
+    }
+
+    .form-fisrtname,
+    .form-fisrtname label,
+    input,
+    textarea,
+    select {
+        width: 100%; 
+        box-sizing: border-box; 
+    }
 }
-#ltxt{
-    font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(75, 74, 74);
-    font-weight: bold;
-    line-height: 2;
-}
-form{
-  margin-bottom: 30px;
-}
+
      </style>
 
 <header>
@@ -127,15 +150,15 @@ form{
         <div class="formdisplay">
     <div class="contact-image">
         <img src="img/theteam.png" alt="" style="border-radius: 9px;">
-        <p id="cantwaitt">We can't wait to hear <br> from you!</p>
-        <p id="loc"> Serving Seattle + Beyond <br>  </p>
-        <p id="ltxt">Looking for internship information? Click here. <br>etherealevenets@gmail.com</p>
+        <p id="par1">We can't wait to hear <br> from you!</p>
+        <p id="par2"> Serving Seattle + Beyond <br>  </p>
+        <p id="par3">Looking for internship information? Click here. <br>etherealevenets@gmail.com</p>
     </div>
 
 <form action="" method="">
   <div class="names">
     <p>Name (required)</p>
-  <div class="inputatbashk">
+  <div class="both-names">
   <div class="form-fisrtname">
      <label >First name</label> <br> 
     <input type="text" name="firstname" id="firstname">
@@ -150,7 +173,7 @@ form{
 
     <p>Partner's name</p> 
 
-    <div class="fbs">
+    <div class="both-names">
     <div class="form-fisrtname">
         <label >First name</label> <br>
         <input type="text" name="partnersname" id="partnersname"> <br> <br>
@@ -166,37 +189,36 @@ form{
 
 <textarea name="pronouns" id="pronouns" cols="100" rows="6"></textarea> <br> <br>
 <p>Digits</p> <br>
-<label for="">Country</label> <br>
-<input type="text" name="country" id="country"> <br> <br>
-<label for="">Number</label> <br>
-<input type="number" name="number" id="number"> <br> <br>
-<label for="">Email adress(required)</label> <br>
-<input type="email" name="email" id="email"> <br> <br>
-<label for="">Event date</label> <br>
-<input type="date" name="date" id="date"> <br> <br>
-<label for="">Location(required)</label> <br>
-<input type="text" name="location" id="location"><br> <br>
-<label for="">Estimated guest count(required)</label><br>
-<input type="text" name="guests" id="guests"><br> <br>
-<label for="">How did you hear about us?</label><br> <br>
-<select name="" id="">
-<option value="">Word of mouth</option>
-<option value="1">Google</option>
-<option value="2">Wedding wire</option>
-<option value="3">Instagram</option>
-<option value="4">The knot</option>
-<option value="5">Vendor site</option>
-<option value="6">Past wedding event</option>
-<option value="7">Other</option>
+ <label for="">Country</label> <br>
+ <input type="text" name="country" id="country"> <br> <br>
+ <label for="">Number</label> <br>
+ <input type="number" name="number" id="number"> <br> <br>
+ <label for="">Email adress(required)</label> <br>
+ <input type="email" name="email" id="email"> <br> <br>
+ <label for="">Event date</label> <br>
+ <input type="date" name="date" id="date"> <br> <br>
+ <label for="">Location(required)</label> <br>
+ <input type="text" name="location" id="location"><br> <br>
+ <label for="">Estimated guest count(required)</label><br>
+ <input type="text" name="guests" id="guests"><br> <br>
+ <label for="">How did you hear about us?</label><br> <br>
+ <select name="" id="">
+ <option value="">Word of mouth</option>
+ <option value="1">Google</option>
+ <option value="2">Wedding wire</option>
+ <option value="3">Instagram</option>
+ <option value="4">The knot</option>
+ <option value="5">Vendor site</option>
+ <option value="6">Past wedding event</option>
+ <option value="7">Other</option>
 </select><br> <br>
 <label for="">What's your drink of choice ?</label><br>
-<p id="littletext">Examples: bubbly, malbec, tea, pepsi, etc.</p> <br>
-<textarea name="" id="" cols="100" rows="4"></textarea> <br>
-<label for="">Let us know a little bit about you and your event/project</label> <br>
-<p id="littletext">We can't wait to learn more about you, your story, + style!</p><br>
-<textarea name="" id="" cols="100" rows="6"></textarea> <br>
-<input type="submit" value="SUBMIT" class="submittt">
-
+  <p id="littletext">Examples: bubbly, malbec, tea, pepsi, etc.</p> <br>
+  <textarea name="" id="" cols="100" rows="4"></textarea> <br>
+  <label for="">Let us know a little bit about you and your event/project</label> <br>
+  <p id="littletext">We can't wait to learn more about you, your story, + style!</p><br>
+  <textarea name="" id="" cols="100" rows="6"></textarea> <br>
+  <input type="submit" value="SUBMIT" class="submittt-button">
 </div> 
 
 </form>
