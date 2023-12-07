@@ -11,13 +11,7 @@
 <body>
 
     <style>
-      /*
-        *, *:before, *:after {
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        }
-      */
+      
       body {
        
          background-color: beige;
@@ -161,7 +155,6 @@
         border-bottom: 1px solid #dbd6d6;
         color: rgb(10, 29, 10);
         font-size: 14px;
-        text-transform: uppercase;
         outline: none;
         transition: border-color .2s;
       }
@@ -262,12 +255,43 @@
          </nav>
      </header>
  
-      
-     <div class="background">
+
+     <script>
+      function validateForm() {
+          var nameInput = document.getElementById('name');
+          var emailInput = document.getElementById('email');
+          var contactNoInput = document.getElementById('contactNo');
+          var messageInput = document.getElementById('message');
+
+          var nameRegex = /^[A-Z][a-z]*$/;
+          if (!nameRegex.test(nameInput.value)) {
+              alert('Please enter a valid name starting with an uppercase letter.');
+              return false;
+          }
+
+          var emailRegex = /@/;
+          if (!emailRegex.test(emailInput.value)) {
+              alert('Please enter a valid email address.');
+              return false;
+          }
+
+          
+          return true;
+      }
+
+      function submitForm() {
+          if (validateForm()) {
+              alert('Form submitted successfully!');
+          }
+      }
+  </script>
+</head>
+<body>
+
+  <div class="background">
       <div class="container">
           <div class="screen">
               <div class="screen-header">
-              
                   <div class="screen-header-right">
                       <div class="screen-header-ellipsis"></div>
                       <div class="screen-header-ellipsis"></div>
@@ -305,7 +329,6 @@
           </div>
       </div>
   </div>
-
 
 <section>
     <div class="icons">
