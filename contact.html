@@ -314,29 +314,6 @@
       </div>
   </div>
 
-  <script>
-      function submitForm() {
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var contactNo = document.getElementById("contactNo").value;
-          var message = document.getElementById("message").value;
-
-          if (name === "" || email === "" || contactNo === "" || message === "") {
-              alert("Please fill in all the fields.");
-          } else if (!validateEmail(email)) {
-              alert("Please enter a valid email address.");
-          } else {
-              alert("Form submitted successfully!\nName: " + name + "\nEmail: " + email + "\nContact No: " + contactNo + "\nMessage: " + message);
-              // Add code here to handle the form submission, e.g., sending data to a server.
-          }
-      }
-
-      function validateEmail(email) {
-          // Regular expression for basic email validation
-          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailRegex.test(email);
-      }
-  </script>
 
 <section>
     <div class="icons">
@@ -351,7 +328,7 @@
     
     </div>
   </section>
-  
+
   
 
 
