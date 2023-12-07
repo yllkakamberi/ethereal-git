@@ -440,9 +440,10 @@ section {
 
       
 footer {
-  background-color: #333;
+  background-color:rgb(27, 52, 27);
   color: #ddd;
   padding: 20px 0; 
+  font-family: classico-urw;
 }
 .container {
   display: flex;
@@ -459,4 +460,17 @@ footer {
 }
 .contact-info p{
   color: white;
+}
+.section-categories{
+  text-align: center;
+}
+.section-categories a{
+  color: white;
+}
+
+.footer-copyright img{
+  margin-right: 10px;
+}
+.footer-copyright p{
+  margin-left: 30px;
 }
