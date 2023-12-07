@@ -324,10 +324,13 @@
               alert("Please fill in all the fields.");
           } else if (!validateEmail(email)) {
               alert("Please enter a valid email address.");
-          } else {
+          } else if{
               alert("Form submitted successfully!\nName: " + name + "\nEmail: " + email + "\nContact No: " + contactNo + "\nMessage: " + message);
-              // Add code here to handle the form submission, e.g., sending data to a server.
           }
+          else {
+                alert("Successfully signed in");
+                return true;
+            }
       }
 
       function validateEmail(email) {

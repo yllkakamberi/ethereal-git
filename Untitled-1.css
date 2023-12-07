@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal Events </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <style>
+        body {
+    margin: 0;
+background-color:  #f9ffe6;
+    
+}
+
+header {
+    background-color:white;
+    color: #6c6969;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+#logo {
+    width: 188px; /* Adjust the width as needed */
+    height: 90px; /* To maintain aspect ratio */
+    margin-right: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+    font-family: arial;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+li:hover{
+    background-color: #f2ffcc;
+    padding: 20px;
+    border-radius: 7px;
+}
+li:first-child{
+    background-color: #f2ffcc;
+    padding: 20px;
+    border-radius: 7px;
+}
+li a{
+    text-decoration: none;
+    color: #6c6969;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.slideshow-container img{
+    border-radius: 14px;
+}
+
+/* Hide the images by default */
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgb(179, 255, 235)
+  ;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 4px;
+  width: 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.fix{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.after-header{
+    margin-left: 70px;
+    margin-right: 70px;
+    border-radius: 30px;
+    line-height:2;
+    background-color: #f2ffcc
+    ;
+}
+#first{
+    
+    text-align: center;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 26px;
+    color: #354607
+
+    ;
+}
+#second{
+    margin-right: 180px;
+    margin-left: 180px;
+    text-align: center;
+    font-family: classico-urw;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #56603c
+    ;
+    
+}
+.aboutus{
+    padding: 10px;
+    background-color: #4e6021;
+    color: rgb(247, 244, 239);
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+    font-family:  monospace;
+    margin-left: 563px;
+    margin-bottom: 23px;
+
+}
+.aboutus:hover{
+    background-color: #354607;
+    
+}
+#ourservices-text{
+    border: 2px solid #354607;
+    border-radius: 9px;
+    height:62px;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .flex-item {
+    text-align: center;
+  }
+
+  .flex-item img {
+    width: 400px;
+    height: 410px;
+    border-radius: 6px; /* Optional: add border radius for a rounded look */
+  }
+
+  .submit-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4e6021;
+    color: rgb(247, 244, 239);
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+    font-family:  monospace;
+  }
+  .submit-button:hover{
+    background-color: #354607;
+  }
+  .hands{
+    height: 200px;
+    width: 350px;
+    margin-left: 440px;
+  }
+  .description{
+    text-align: center;
+    font-family: classico-urw;
+    font-size: 14px;
+    font-weight: 900;
+    color: #4c5634;
+    padding: 5px;
+  }
+  .howitallstarted{
+    border: 2px solid #354607;
+    border-radius: 9px;
+    height:72px;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+  }
+  /*
+  .thecouple{
+    background-color: #626e44;
+    margin: 27px;
+    border-radius: 9px;
+  }
+  .thecouple img{
+border-radius: 8px; 
+height: 190px;
+width: 390px;
+margin-bottom: 18px;
+}
+#image1{
+    margin-left: 88px;
+    margin-top: 30px;
+}
+#image2{
+    margin-left: 126px;
+}
+#image3{
+    margin-left: 58px;
+}
+*/
+.thecouple {
+    display: flex;
+    justify-content: space-between;
+    background-color: #6b764d;
+    margin: 19px;
+    border-radius: 15px;
+  height: 700px;
+}
+  
+  
+  
+  .ceo-container {
+    display: flex;
+  }
+  
+  .ceo-images {
+    display: block; 
+    height: 190px;
+width: 390px;
+margin: 22px;
+margin-bottom: 13px;/* Set the images to display as a block */
+  }
+  
+  .ceo-image1 {
+    width: 100%; /* Ensure the images take full width of their container */
+    height: auto;
+    margin-bottom: 12px;
+    margin-left: 30px;
+    border-radius: 9px;
+  }
+  .ceo-image2 {
+    width: 100%; /* Ensure the images take full width of their container */
+    height: auto;
+    margin-bottom: 12px;
+    margin-left: 53px;
+    border-radius: 9px;
+
+  }
+  .ceo-image3 {
+    width: 100%; /* Ensure the images take full width of their container */
+    height: auto;
+    margin-bottom: 12px;
+    border-radius: 9px;
+
+  }
+  .ceo-text {
+    max-width: 640px;
+    font-size: 15px;
+    font-family: classico-urw;
+    font-weight: 600;
+    color: #ebf7cb;
+    margin-left: 250px;
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+  .featured-images{
+    display: inline;
+    justify-content: space-between;
+    margin-left: 310px;
+
+  }
+  .featured-images img{
+    align-items: center;
+    height: 130px;
+    width: 130px;
+  }
+  .featured h2{
+    text-align: center;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    color: #354607;
+
+  }
+  .follow-along img{
+    display: inline;
+    width: 230px;
+    height: 220px;
+    justify-content: space-around;
+    margin-left: 19px;
+  }
+  .follow-along h2{ text-align: center;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    color: #354607;}
+    
+
+footer{
+    height: 210px;
+    background-color: #6b7943;
+    margin-top: 30px;
+    
+}
+
+    .footer-icons{
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        margin:8px;
+        border-radius: 7px;
+    }
+    .icons{
+        margin-left: 680px;
+        margin-bottom: 100px;
+        display: flex;
+        margin-top: 70px;
+    }
+   
+ .footer-p{
+    margin-top: 30px;
+    text-decoration: none;
+    text-align: center;
+        color: white;
+        font-family: monospace;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 2;
+        margin-right: 10px;
+ }
+ #ft4{
+    width: 170px;
+    height: 140px;
+    margin-left: 140px;
+    left: 140px;
+    bottom: 0; /* Adjust as needed */
+ }
+
+
+ /*pjesa per log in */
+
+.login-btn{
+    border: none;
+    outline: none;
+    color: blue;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: beige;
+}
+.form-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 720px;
+    width: 100%;
+    background: bisque;
+    border: 2px solid whitesmoke;
+    transform: translate(-50%, -50%);
+}
+.form-popup .form-box{
+    display: flex;
+}
+.form-box .detaje{
+    max-width: 330px;
+}
+.form-box h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.formcont h2{
+    text-align: center;
+    margin-bottom: 140px;
+}
+.form-box .formcont{
+    width: 100%;
+    padding: 35px;
+}
+form .inputi{
+    height: 50px;
+    width: 40%;
+    padding: 1px;
+    margin: 10px;
+    padding-left: 140px;
+   
+}
+form .inputi input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 3px;
+    padding: 0 49px;
+    font-size: 0.95rem;
+    border: 1px solid red;
+
+}
+form .inputi label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: gray;
+    pointer-events: none;
+    transform: translate(-50%);
+    transition: 0.2s ease;
+}
+
+.inputi input:is(:focus, :valid) ~ label{
+    font-size: 0.75rem;
+    transform: translate(-120%);
+}
+
+
+    </style>
+
+    <header>
+        <img src="projekti2/logo.png" alt="Your Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">LOG-IN</a></li>
+            </ul>
+            <button class="login-btn">LOG IN</button>
+        </nav>
+
+    </header>
+    <div class="forma-popup">
+        <div class="form-box">
+            <div class="detaje">
+                <h2>WELCOME</h2>
+        
+            </div>
+        <div class="formcont">
+            <h2>LOGIN</h2>
+            <form action="#">
+        
+            <div class="inputi">
+                <input type="text" required>
+                <label >Email</label>
+        
+        </div>
+        
+        <div class="inputi">
+            <input type="password" required>
+            <label >Password</label>
+        
+        </div>
+        
+        
+        <a href="#" class="forgot">Forgot password</a>
+        <button type="submit">Log in</button>
+        
+        
+            </form>
+            <div class="bottomi">
+                Don't have an account?
+                <a href="#">Sign up</a>
+            </div>
+        
+        </div>
+        </div>
+        
+            </div>
+        </div>
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="projekti2/f1.png" style="width:100%">
+          
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="projekti2/f2.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="projekti2/f3.png" style="width:100%">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!--
+
+<section>
+
+<h2 id="question">What makes us different than other wedding planners?</h2>
+<div class="two-paragraphs">
+<p id="p1"> People often wonder about this when we talk to couples and vendors. We all  agree  <br> that what drives us is a mix of genuine care, a clear purpose, and a strong passion.   <br>We want your event to be more than just an occasion –  we want it to be  an amazing  <br>experience, from the planning stages  to celebrating with your closest friends and <br> family. Our expertise is in planning,  coordinating, and designing weddings.  Whether <br> you have questions about our services  or just want to chat, we'd love  to hear from  <br>you!</p>
+<p id="p2">We began with a deep conviction that there's an extraordinary and unparalleled  <br>magic in coming together with your dearest friends and family to celebrate love  <br>and life's memorable moments. Each person we work with is like a wonderfully <br> unique and beautiful story waiting to be told.  It fills us with immense joy and  <br>brings  a big smile to our faces when our clients  trust us to craft an event  that <br> truly reflects their distinct and special journey.</p>
+</div>
+<input type="submit" value="LEARN MORE ABOUT US!" class="review">
+<img src="img/hands.png" alt="" id="hands-image">
+<p id="couple-names"> FOREVER BEGINS WITH US</p>
+</section>
+
+-->
+<div class="fix">
+<div class="after-header">
+<p id="first"> -WEDDINGS AND SPECIAL EVENTS ARE OUR PASSION-</p>
+
+<p id="second"><em style="font-weight: 600; color:  #314003 ; font-size: 19px;">Ethereal Events</em> — where weddings are not just events, but a canvas for crafting unforgettable love stories. Our passion lies in the art of turning dreams into reality, and your wedding day is our masterpiece. At <em style="font-weight: 600; color:  #2e3c04
+    ;font-size: 19px;">Ethereal Events</em>, we understand that each love story is unique, and it's our commitment to infuse your distinct personality and style into every detail. From the initial consultation to the grand celebration, we are dedicated to curating an experience that reflects your vision and surpasses your expectations. With a team of passionate professionals, we thrive on the joy of making your dreams come true. Your journey to 'I do' deserves meticulous planning, creative expertise, and a touch of magic—we're here to make it happen. Let us be the architects of your love story, creating a wedding day that resonates with the essence of your unique connection. Welcome to a world where your wedding dreams become our shared passion.
+
+
+
+
+
+</p>
+<img src="projekti2/hands.png" alt="" class="hands">
+<input type="submit" value="MORE ABOUT US!" class="aboutus" >
+
+</div>
+
+</div>
+
+<div class="services">
+<img src="projekti2/ourservices.png" alt="" id="ourservices-text">
+<div class="flex-container">
+    <div class="flex-item">
+      <img src="projekti2/service1.png" alt="Image 1"> <br>
+      <p class="description">Embark on an intimate journey with our elopements, where love takes center stage against breathtaking backdrops. It's a personal escape, a celebration of connection crafted uniquely for you.</p> <br>
+      <input type="submit" value="ELOPEMENTS" class="submit-button"> 
+    </div>
+    <div class="flex-item">
+      <img src="projekti2/service2.png" alt="Image 2"> <br>
+      <p class="description">Celebrate love in a grand symphony with our weddings. We weave together traditions and modernity to create a joyous union, crafting memories that resonate with your unique story.</p> <br>
+      <input type="submit" value="WEDDINGS" class="submit-button">
+    </div>
+    <div class="flex-item">
+<img src="projekti2/service3.png" alt="">      <br>
+<p class="description">Immerse yourself in creativity with our styled shoots. These curated visions of beauty inspire your dream wedding, blending unique styles and trends to tailor an unforgettable experience, crafted just for you.</p> <br>
+ <input type="submit" value="STYLED SHOOTS" class="submit-button">
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="ceo">
+    <img src="projekti2/howitallstarted.png" alt="" class="howitallstarted">
+
+
+
+</div>
+<div class="thecouple">
+    <div class="ceo-container">
+      <div class="ceo-images">
+        <img src="projekti2/ceo.png" alt="" class="ceo-image1">
+        <img src="projekti2/ceo1.png" alt="" class="ceo-image2">
+        <img src="projekti2/ceo2.png" alt="" class="ceo-image3">
+      </div>
+      <div class="ceo-text">
+        <p style="font-size: 19px;"> We're <em style="font-size: 18px;color: rgb(251, 254, 243);"> Michael and Alexia </em>, <br> the creative minds behind <em style="font-size: 18px;color: rgb(251, 252, 247);">Ethereal Events</em>,</p> <p> and we're thrilled to be your partners in crafting a celebration as unique as your love story. Nestled in the heart of Raleigh, NC, our passion for unforgettable moments is matched only by our love for coffee, the delicate beauty of florals, and the art of a perfectly mixed gin cocktail (looking at you, Alexia!). <br> Family is at our core, from our charming two-year-old, Harvey, to our fur babies, Ella Mae and Tuck Tuck, who might just steal the spotlight at one of our cozy client meetings. Grounded in our faith, we embrace inclusivity, diversity, and a commitment to living life fully. Michael is our steady force, adding his touch of magic as not only your trusted photographer but also our in-house officiant. <br> With Alexia's background in marketing and project management, we lead our dynamic team to curate Ethereal Events into a true reflection of your love story. Our approach is rooted in conversation, art, honesty, and the celebration of diversity. We're devoted to rooting your special day in its unique narrative. At Ethereal Events, we don't just plan weddings; we curate experiences filled with love, laughter, and unforgettable moments. We can't wait to connect with you and embark on this beautiful journey together.  <br> <br></p><p>
+     <p><em style="font-size: 19px;color:white;"> "Cherish each other as we have cherished you." - John 15:12 </em></p>
+        </div>
+    </div>
+  </div>
+
+
+<div class="featured">
+    <h2>WE'RE FEATURED IN</h2>
+    <hr style="margin-left: 140px;margin-right: 140px;
+    color: #2e3c04;">
+    <div class="featured-images">
+    <img src="img/featured1.png" alt="">
+
+<img src="projekti2/featured2.png" alt="">
+<img src="projekti2/featured3.png" alt="">
+<img src="img/featured4.png" alt="">
+
+<img src="projekti2/featured5.png" alt="">
+<img src="projekti2/featured6.png" alt="">
+<img src="projekti2/featured7.png" alt="">
+
+</div>
+
+</div>
+
+<div class="follow-along">
+    <h2>FOLLOW ALONG ON INSTAGRAM!
+    </h2>
+<img src="projekti2/along1.png" alt="">
+<img src="projekti2/along2.png" alt="">
+<img src="projekti2/along3.png" alt="">
+<img src="projekti2/along4.png" alt="">
+<img src="projekti2/along5.png" alt="">
+<img src="projekti2/along6.png" alt="">
+
+</div>
+    
+
+
+
+
+    <footer>
+<div class="footer-p">
+    <p>OUR JOURNAL</P>
+    <p>LOG-IN</p>
+    <p>FOREVER BEGINS WITH US</p>   
+     </div>
+
+
+        <div class="icons">
+
+  <a href=""><img src="projekti2/pinterest.png" alt="" class="footer-icons"></a>
+<a href="">  <img src="projekti2/instagram.png" alt="" class="footer-icons"></a> 
+<a href=""><img src="projekti2/location.png" alt="" class="footer-icons"></a> 
+
+
+</div>
+
+
+
+   </footer>
+
+
+</body>
+</html>
