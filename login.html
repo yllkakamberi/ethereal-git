@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <head>
@@ -7,17 +6,18 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <style>
-    
-    body{
+
+body{
     margin: 0;
     padding: 0;
     background-image: url(background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family : Verdana,Tahoma, sans-serif;
- }
+    
+}
 
-    .box{
+.box{
     width: 380px;
     height: 500px;
     background-color: rgb(196, 208, 196);
@@ -28,27 +28,30 @@
     box-sizing: border-box;
     flex-direction: column;
     border-radius: 8px;
-}
     
-    .box img{
+}
+
+.box img{
     width:100px;
     margin-top:-50px ;
- }
+}
 
-    .header {
+.header {
     width: 300px;
     height: 50px;
     text-transform: uppercase;
     display: inline-flex;
     padding-top: 10px;
+   
     justify-content: space-between;
 }
 
-    .header a {
+.header a {
     font-size: 18px;
     text-decoration: none;
     color: #353232;
     font-family: monospace;
+
     display: inline-flex;
     padding-left: 25px;
     padding-right: 25px;
@@ -56,34 +59,34 @@
     justify-content: center;
     cursor:pointer;
     border-radius: 8px;
- }
+}
 
-    .header .active {
+.header .active {
     color: #e6ede7;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
-    
 }
 
-    .header .active:after {
+.header .active:after {
     position: absolute;
     border: none;
     content: "";
 }
 
-    #errorMsg{
+#errorMsg{
     color:red;
     text-align: center;
     font-size: 12px;
     padding-bottom: 20px;
+
 }
 
-    .content{
+.content{
     display: inline-flex;
     overflow: hidden;
 }
 
-    form {
+form {
     position: relative;
     display: inline-flex;
     width: 100%;
@@ -93,7 +96,7 @@
     transition: right 0.5s;
 }
 
-    .login a{
+.login a{
     text-decoration: none;
     color: #ffffff;
     font-size: 15px;
@@ -102,11 +105,11 @@
 
 }
 
-    .extend form {
+.extend form {
     right: 100%;
 }
 
-    input[type=text], input[type=password], input[type=email]{
+input[type=text], input[type=password], input[type=email]{
     display:block;
     position: relative;
     border: 1px solid #ffffff;
@@ -120,41 +123,41 @@
     font-family: monospace;
 }
 
-    input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
-    border: 1px solid rgb(2, 24, 2);
+input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border: 4px solid #043a19;
 
 }
 
-    input[type=submit]{
+input[type=submit]{
     display:block;
     position: relative;
     border: 3px solid #ebd7f1;
     padding: 12px;
     margin-bottom: 20px;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 25px;
     background-color:rgb(5, 53, 21) ;
     text-align:center;
-    font-size: 15px;
-    color: white;
+    font-size: 20px;
+    color: #ffffff;
     cursor:pointer;
     outline: none;
     font-family: monospace;
 
 }
     
-    input[type=submit]:hover{
-     background-color:white;
-     color: black;
+input[type=submit]:hover{
+     background-color:#ffffff;
+     color: #000000;
      
 }
-    input[type=checkbox]{
+input[type=checkbox]{
     background-color:#df80ff;
 }
-    #check{
+#check{
     margin-top: 10px;
     text-align: left;
-    color: white;
+    color: #ffffff;
     font-size: 15px;
 }
 
@@ -205,93 +208,61 @@
                 </form>
             </div>
         </div>
-    </div> <br>
-    <br>
-    <footer>
-        <footer class="footer">
-            <div class="container">
-                <div class="section categories">
-                    <h2>Navigation</h2>
-                    <div class="kategorite">
-                      <a href="about.html"><p>About</p></a>
-                      <a href="services.html"> <p>Services</p></a>
-                      <a href="gallery.html"> <p>Gallery</p></a>
-                      <a href="contact.html">  <p>Contact</p></a>
-                      <a href="login.html"> <p>Log-in</p></a>
-                    </div>
-                </div>
-
-               
-        
-                <div class="section contact-us">
-                    <h2>Contact Us</h2>
-                    <div class="contact-info">
-                        <p>Phone: <span>+383 443-212-612</span></p>
-                        <p>Email: <span>etherealevents@gmail.com</span></p>
-                        <p>Address: <span>Seattle,near Pike Place Market</span></p>
-                    </div>
-                    <textarea placeholder=" your message to us..."></textarea>
-                </div>
-                
-                <div class="footer-copyright">
-              <p>© 2023 ETHEREAL EVENTS. | FOREVER BEGINS WITH US </p>
-            </div>
-        </div>
-    </footer> 
-    <script>
-        $(window).on("hashchange", function () {
-            if (location.hash.slice(1) == "signup") {
-                $(".page").addClass("extend");
-                $("#login").removeClass("active");
-                $("#signup").addClass("active");
-            } else {
-                $(".page").removeClass("extend");
-                $("#login").addClass("active");
-                $("#signup").removeClass("active");
-            }
-        });
-        $(window).trigger("hashchange");
-        
-        function validateLoginForm() {
-            var name = document.getElementById("logName").value;
-            var password = document.getElementById("logPassword").value;
-        
-            if (name == "" || password == "") {
-                document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
-                return false;
-            }
-        
-            else if (password.length < 8) {
-                document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
-                return false;
-            }
-            else {
-                alert("Successfully logged in");
-                return true;
-            }
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+<script>
+    $(window).on("hashchange", function () {
+        if (location.hash.slice(1) == "signup") {
+            $(".page").addClass("extend");
+            $("#login").removeClass("active");
+            $("#signup").addClass("active");
+        } else {
+            $(".page").removeClass("extend");
+            $("#login").addClass("active");
+            $("#signup").removeClass("active");
         }
-        function validateSignupForm() {
-            var mail = document.getElementById("signEmail").value;
-            var name = document.getElementById("signName").value;
-            var password = document.getElementById("signPassword").value;
-        
-            if (mail == "" || name == "" || password == "") {
-                document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
-                return false;
-            }
-        
-            else if (password.length < 8) {
-                document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
-                return false;
-            }
-            else {
-                alert("Successfully signed up");
-                return true;
-            }
+    });
+    $(window).trigger("hashchange");
+    
+    function validateLoginForm() {
+        var name = document.getElementById("logName").value;
+        var password = document.getElementById("logPassword").value;
+    
+        if (name == "" || password == "") {
+            document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+            return false;
         }
     
-    </script>
+        else if (password.length < 8) {
+            document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+            return false;
+        }
+        else {
+            alert("Successfully logged in");
+            return true;
+        }
+    }
+    function validateSignupForm() {
+        var mail = document.getElementById("signEmail").value;
+        var name = document.getElementById("signName").value;
+        var password = document.getElementById("signPassword").value;
+    
+        if (mail == "" || name == "" || password == "") {
+            document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+            return false;
+        }
+    
+        else if (password.length < 8) {
+            document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+            return false;
+        }
+        else {
+            alert("Successfully signed up");
+            return true;
+        }
+    }
 
+</script>
 </body>
-</html>
-
