@@ -436,8 +436,6 @@ section {
     margin-left: 10px; 
   }
 }
-
-
       
 footer {
   background-color:rgb(27, 52, 27);
@@ -457,6 +455,7 @@ footer {
 }
 .kategorite p{
   color: white;
+  text-decoration: none;
 }
 .contact-info p{
   color: white;
@@ -474,6 +473,17 @@ footer {
 .footer-copyright p{
   margin-left: 30px;
 }
-.katgorite a{
-  text-decoration: none;
+#contactus-button{
+  padding: 11px;
+  font-family: classico-urw;
+  font-weight: 600;
+  background-color: #646f46;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100px;
+}
+#contactus-button:hover{
+  background-color: #2a350d;
 }
