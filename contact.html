@@ -255,7 +255,58 @@ select{
       </div>
   </div>
 </footer>  
+<!--Validimi i kontakt formes me js-->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
 
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Validimi per names me shkronje te madhe*/
+      const nameRegex = /^[A-Z][a-z]*$/;
+      const firstName = document.getElementById('firstname').value;
+      const lastName = document.getElementById('lastname').value;
+
+      if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+        alert('Please enter valid first and last names starting with an uppercase letter.');
+        return;
+      }
+
+      /* Validimi numrit*/
+      const numberRegex = /^\d+$/;
+      const phoneNumber = document.getElementById('number').value;
+
+      if (!numberRegex.test(phoneNumber)) {
+        alert('Please enter a valid phone number with only numbers.');
+        return;
+      }
+
+      /* Validimi email*/
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const email = document.getElementById('email').value;
+
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      /* Per inputat tjer*/
+      const requiredFields = ['country', 'location', 'guests', 'pronouns', 'date'];
+      for (const fieldId of requiredFields) {
+        const fieldValue = document.getElementById(fieldId).value.trim();
+        if (fieldValue === '') {
+          alert(`Please fill in the ${fieldId.replace('_', ' ')} field.`);
+          return;
+        }
+      }
+
+/*Nese plotesohen krejt*/
+      alert('Form submitted successfully!');
+     
+    });
+  });
+</script>
       </body>
       </html>
 
