@@ -9,6 +9,8 @@ background-color:  #f9ffe6;
       flex-direction: column;
       text-align: center;
     }
+
+    
 }*/header {
   background-color: white;
   color: #6c6969;
@@ -95,13 +97,15 @@ li a {
 
 /* Slideshow  */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 2000px;
+ 
   position: relative;
   margin: auto;
 }
 
 .mySlides {
   display: none;
+ 
 }
 /*dots*/
 .dot {
