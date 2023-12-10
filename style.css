@@ -289,8 +289,7 @@ li a {
       align-items: center; /* Center items horizontally on smaller screens */
     }
   }
-
-  /*h2*/
+  /*h2*/ 
   #read-about{
     margin-top: 40px;
     text-align: center;
