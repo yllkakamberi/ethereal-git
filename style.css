@@ -6,7 +6,7 @@ background-color:  white;
 
 header {
   background-color: white;
-  color: #6c6969;
+  color: #545151;
   height: 100px;
   display: flex;
   align-items: center;
@@ -135,8 +135,8 @@ li a {
   font-family: monospace;
   margin: 0;
   word-spacing: 0;
-  color: #354607;
-  font-weight: 100;
+  color: #3c3e33;
+  font-weight: 600;
 }
 
 .dyparagrafet p {
@@ -257,6 +257,8 @@ li a {
   }
   .ss1 h2{
     margin-top: 30px;
+    color: #3c3e33;
+
   }
   /*heading-emrat*/
   .ss1 h2,
@@ -265,7 +267,7 @@ li a {
     margin-left: 0; /* Center the heading on smaller screens */
     text-align: center;
     font-family: monospace;
-    color: #a58c7b;
+    color: #3c3e33;
     font-size: 23px;
   }
   /*teksti below*/
@@ -293,9 +295,9 @@ li a {
     margin-top: 40px;
     text-align: center;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 600;
     font-family: monospace;
-    color: #86807c;
+    color: #3c3e33;
   }
 
  .about-button{
@@ -316,14 +318,13 @@ li a {
  }
 
 /*fotot ,teksti*/
-/* Default styles */
 .thecouple {
+margin: 20px;
   display: flex;
   justify-content: space-between;
-  /*background-color: #8b9473;*/
-  /*background-color:#929292;*/
   background-color: #9c9087;
   margin: 19px;
+  color:rgb(172, 160, 152);
   border-radius: 15px;
   height: 700px;
 }
