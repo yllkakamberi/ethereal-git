@@ -136,7 +136,7 @@ li a {
   margin: 0;
   word-spacing: 0;
   color: #354607;
-  font-weight: 600;
+  font-weight: 100;
 }
 
 .dyparagrafet p {
@@ -145,14 +145,12 @@ li a {
   text-align: left;
   font-size: 14px;
   font-family: classico-urw;
-  font-weight: 400;
-  font-style: normal;
   letter-spacing: 0em;
-  line-height: 1.6em;
+  line-height: 1.7em;
   text-transform: none;
   color: #393434;
   margin-right: 12px;
-  font-weight: 600;
+  font-weight: 150;
 }
 
 .hands-home img {
@@ -213,7 +211,7 @@ li a {
     padding: 11px;
     font-family: monospace;
     font-weight: 600;
-    background-color: #7a8756;
+    background-color:#71655d;
     color: white;
     border: none;
     border-radius: 8px;
@@ -222,7 +220,7 @@ li a {
   }
 
   #services-button:hover {
-    background-color: #354607;
+    background-color: #383534;
   }
   
   @media screen and (max-width: 768px) and (max-width: 1024px)  and (max-width: 600)  {
@@ -255,7 +253,7 @@ li a {
   .ss3 img {
     width: 100%;
     height: auto; /* Maintain the aspect ratio */
-    border-radius: 9px;
+    border-radius: 20px;
   }
   .ss1 h2{
     margin-top: 30px;
@@ -267,7 +265,7 @@ li a {
     margin-left: 0; /* Center the heading on smaller screens */
     text-align: center;
     font-family: monospace;
-    color: #354607;
+    color: #a58c7b;
     font-size: 23px;
   }
   /*teksti below*/
@@ -278,8 +276,8 @@ li a {
     text-align: center;
     margin-left: 0; /* Center the text on smaller screens */
     font-family: classico-urw;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 15px;
   }
   
   /* Media Query for screens smaller than 768px */
@@ -294,17 +292,18 @@ li a {
   #read-about{
     margin-top: 40px;
     text-align: center;
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 300;
     font-family: monospace;
-    color: #354607;
+    color: #86807c;
   }
 
  .about-button{
   padding: 11px;
   font-family: monospace;
   font-weight: 600;
-  background-color: #7f9150;
+  /*background-color: #7f9150;*/
+  background-color:#71655d;
   color: white;
   font-size: 14px;
   border: none;
@@ -312,7 +311,8 @@ li a {
   margin-left: 730px;
  }
  .about-button:hover{
-  background-color: #354607;
+  background-color: #383534;
+  
  }
 
 /*fotot ,teksti*/
@@ -320,7 +320,9 @@ li a {
 .thecouple {
   display: flex;
   justify-content: space-between;
-  background-color: #8b9473;
+  /*background-color: #8b9473;*/
+  /*background-color:#929292;*/
+  background-color: #9c9087;
   margin: 19px;
   border-radius: 15px;
   height: 700px;
@@ -353,7 +355,7 @@ li a {
   font-size: 15px;
   font-family: classico-urw;
   font-weight: 600;
-  color: #effdc8;
+  color: #ffffff;
   margin-left: 250px;
   line-height: 2;
   margin-bottom: 30px;
@@ -399,6 +401,7 @@ section {
   display: inline-block;
   margin-left: 18px;
   border-radius: 9px;
+ 
 }
 
 .icons {
@@ -446,7 +449,8 @@ section {
 }
       
 footer {
-  background-color:rgb(27, 52, 27);
+  /*background-color:rgb(27, 52, 27); */
+  background-color: rgb(32, 31, 31);
   color: #ddd;
   padding: 20px 0; 
   font-family: classico-urw;
@@ -482,10 +486,11 @@ footer {
   margin-left: 30px;
 }
 #contactus-button{
+  
   padding: 11px;
   font-family: classico-urw;
   font-weight: 600;
-  background-color: #646f46;
+  background-color:#71655d;
   color: white;
   border: none;
   border-radius: 8px;
@@ -493,5 +498,6 @@ footer {
   width: 100px;
 }
 #contactus-button:hover{
-  background-color: #2a350d;
+  /*background-color: #2a350d;*/
+  background-color: #383534;
 }
