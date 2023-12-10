@@ -1,6 +1,6 @@
 body {
     margin: 0;
-background-color:  #f9ffe6;
+background-color:  white;
     
 }
 /*
@@ -128,56 +128,69 @@ li a {
   from {opacity: .4}
   to {opacity: 1}
 }
-/* photo with text */
-.question-section {
-  background-color: white;
-  padding: 20px;
-}
 
-.question-section img {
-  width: 100%; /* Make the image responsive */
-  max-width: 500px; 
-  height: auto; 
-  border-radius: 9px;
-}
-
-#question {
-  width: 100%; /* responsive */
-  max-width: 700px; 
-  height: 110px;
-  border-radius: 17px;
-  margin-top: 70px;
-}
-/*pyetja,teksti bashk*/
-.question-text{
-  display: flex;
-  flex-wrap: wrap; /*  wrap for smaller screens */
-}
-/*pyetja h2*/
-.question-section  h2 {
+/*after slider section*/
+.after-slider {
   text-align: center;
-  font-size: 26px;
+  margin-top: 50px;
+}
+
+.paragrafi1 {
+  font-size: 24px;
   font-family: monospace;
-  margin: 20px 0; 
-  color: #475a17;
+  margin: 0;
+  word-spacing: 0;
+  color: #354607;
+  font-weight: 600;
 }
-/*teksti anash*/
-#question-paragraph {
-  font-size: 18px;
+
+.dyparagrafet p {
+  display: inline-block;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 14px;
   font-family: classico-urw;
-  color: rgb(90, 79, 79);
-  padding: 30px;
-  line-height: 1.7;
-  margin-left: 100px;
-  text-align: left; /* Center the text on smaller screens */
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0em;
+  line-height: 1.6em;
+  text-transform: none;
+  color: #393434;
+  margin-right: 12px;
+  font-weight: 600;
 }
-/* Media Query for screens smaller than 768px */
-@media screen and (max-width: 768px) and (max-width: 1024px)  and (max-width: 600)  {
-  #question-paragraph {
-    margin-left: 0; /* Remove left margin on smaller screens */
+
+.hands-home img {
+  align-items: center;
+  height: 233px;
+  width: 100%;
+  max-width: 500px; 
+  margin: 0 auto; 
+}
+
+/* Media query for screens with a width of 768px */
+@media screen and (min-width: 768px) {
+  .paragrafi1 {
+    font-size: 14px;
   }
- 
+
+  .dyparagrafet p {
+    font-size: 14px; 
+  }
 }
+
+/* Media query for screens with a width of 1024px */
+@media screen and (min-width: 1024px) {
+  .paragrafi1 {
+    font-size: 24px; 
+  }
+
+  .dyparagrafet p {
+    font-size: 15px; 
+  }
+}
+
+
 /*pjesa SERVICES*/
   .container-servicesimg {
     position: relative;
