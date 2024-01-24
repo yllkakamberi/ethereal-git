@@ -156,7 +156,7 @@ select{
         <p id="par3">Looking for internship information? Click here. <br>etherealevenets@gmail.com</p>
     </div>
 
-<form action="" method="">
+<form action="save_form.php" method="post">
   <div class="names">
     <p>Name (required)</p>
   <div class="both-names">
@@ -182,7 +182,7 @@ select{
 
  <div class="form-fisrtname">
      <label for="">Last name</label> <br>
-     <input type="text" name="lastname" id="lastname"> <br> <br>
+     <input type="text" name="partnerslastname" id="partnerslastname"> <br> <br>
 </div>
 </div>
 
@@ -215,10 +215,10 @@ select{
 </select><br> <br>
 <label for="">What's your drink of choice ?</label><br>
   <p id="littletext">Examples: bubbly, malbec, tea, pepsi, etc.</p> <br>
-  <textarea name="" id="" cols="100" rows="4"></textarea> <br>
+  <textarea name="drink-choice" id="drink-choice" cols="100" rows="4"></textarea> <br>
   <label for="">Let us know a little bit about you and your event/project</label> <br>
   <p id="littletext">We can't wait to learn more about you, your story, + style!</p><br>
-  <textarea name="" id="" cols="100" rows="6"></textarea> <br>
+  <textarea name="about-you" id="about-you" cols="100" rows="6"></textarea> <br>
   <input type="submit" value="SUBMIT" class="submittt-button">
 </div> 
 
@@ -226,6 +226,98 @@ select{
 
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector('form');
+
+  const validateForm = (event) => {
+    event.preventDefault();
+
+    const firstName = document.getElementById('firstname');
+    const lastName = document.getElementById('lastname');
+    const partnersFirstName = document.getElementById('partnersname');
+    const partnersLastName = document.getElementById('partnerslastname'); 
+    const country = document.getElementById('country');
+    const number = document.getElementById('number');
+    const email = document.getElementById('email');
+    const date = document.getElementById('date');
+    const location = document.getElementById('location');
+    const guests = document.getElementById('guests');
+    const pronouns = document.getElementById('pronouns');
+    const drinkChoice = document.getElementById('drink-choice');
+    const aboutYou = document.getElementById('about-you');
+    
+    if (!firstName.value.trim() || !lastName.value.trim()) {
+      alert("Please enter both first and last names.");
+      return false;
+    }
+
+    if (!partnersFirstName.value.trim()) {
+      alert("Please enter partner's first name.");
+      return false;
+    }
+
+    if (!partnersLastName.value.trim()) {
+      alert("Please enter partner's last name.");
+      return false;
+    }
+
+    if (!country.value.trim()) {
+      alert("Please enter your country.");
+      return false;
+    }
+
+    if (!number.value.trim() || isNaN(number.value.trim())) {
+      alert("Please enter a valid number.");
+      return false;
+    }
+
+    if (!email.value.trim() || !validateEmail(email.value.trim())) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!date.value.trim()) {
+      alert("Please select an event date.");
+      return false;
+    }
+
+    if (!location.value.trim()) {
+      alert("Please enter the event location.");
+      return false;
+    }
+
+    if (!guests.value.trim() || isNaN(guests.value.trim())) {
+      alert("Please enter a valid number for estimated guest count.");
+      return false;
+    }
+
+    if (pronouns.value.trim() && pronouns.value.trim().length > 100) {
+      alert("Preferred pronouns should be less than 100 characters.");
+      return false;
+    }
+
+    if (drinkChoice.value.trim() && drinkChoice.value.trim().length > 100) {
+      alert("Drink choice description should be less than 100 characters.");
+      return false;
+    }
+
+    if (aboutYou.value.trim() && aboutYou.value.trim().length > 300) {
+      alert("About you description should be less than 300 characters.");
+      return false;
+    }
+
+    form.submit();
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+    return emailRegex.test(email.toLowerCase());
+  };
+
+  form.addEventListener('submit', validateForm);
+});
+</script>
 
 <section>
   <div class="icons">

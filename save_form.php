@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $formData[$field] = isset($_POST[$field]) ? htmlspecialchars(trim($_POST[$field])) : '';
     }
 
-    $optionalFields = ['referral_source', 'drink_of_choice', 'about_you'];
+    $optionalFields = ['referral_source', 'drink-choice', 'about-you'];
 
     foreach ($optionalFields as $field) {
         $formData[$field] = isset($_POST[$field]) ? htmlspecialchars(trim($_POST[$field])) : '';
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssssssssssss", $formData['firstname'], $formData['lastname'], $formData['partnersname'], $formData['partnerslastname'], $formData['pronouns'], $formData['country'], $formData['number'], $formData['email'], $formData['date'], $formData['location'], $formData['guests'], $formData['referral_source'], $formData['drink_of_choice'], $formData['about_you']);
 
     if ($stmt->execute()) {
-        header("Location: index.html");
+        header("Location: index.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;
