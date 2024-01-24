@@ -114,7 +114,19 @@
 </style>
 <body>
 
-  index.php
+<header>
+       <a href="index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="services.php">SERVICES</a></li>
+                <li><a href="gallery.php">GALLERY</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="http://localhost/ethereal-git/login/login_form.php">LOG-IN</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
       <img src="img/services-home.png" alt="Your Photo" class="image">
       <div class="text-overlay">We’re so happy you're here + would love to tell you a bit more about Ethereal Events.</div>
