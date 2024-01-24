@@ -132,20 +132,19 @@ select{
 }
 
      </style>
-
-<header>
-  <a href="index.html"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
-   <nav>
-       <ul>
-           <li><a href="index.html">HOME</a></li>
-           <li><a href="about.html">ABOUT</a></li>
-           <li><a href="services.html">SERVICES</a></li>
-           <li><a href="gallery.html">GALLERY</a></li>
-           <li><a href="contact.html">CONTACT</a></li>
-           <li><a href="http://localhost/ethereal-git/login/login_form.php">LOG-IN</a></li>
-          </ul>
-   </nav>
-</header>
+    <header>
+       <a href="index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="services.php">SERVICES</a></li>
+                <li><a href="gallery.php">GALLERY</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="http://localhost/ethereal-git/login/login_form.php">LOG-IN</a></li>
+            </ul>
+        </nav>
+    </header>
 <body>
   
         <div class="formdisplay">
@@ -333,18 +332,18 @@ select{
   </div>
 </section>
 <footer>
-  <footer class="footer">
-      <div class="container">
-          <div class="section-categories">
-              <h2>Navigation</h2>
-              <div class="kategorite">
-                 <a href="about.html"><p>About</p></a> 
-                 <a href="services.html"><p>Services</p></a>
-                 <a href="gallery.html"><p>Gallery</p></a>
-                 <a href="contact.html"><p>Contact</p></a>
-                 <a href="login.html"><p>Log-in</p></a>
-              </div>
-          </div>
+<footer class="footer">
+                <div class="container">
+                    <div class="section-categories">
+                        <h2>Navigation</h2>
+                        <div class="kategorite">
+                           <a href="about.php"><p>About</p></a> 
+                           <a href="services.php"><p>Services</p></a>
+                           <a href="gallery.php"><p>Gallery</p></a>
+                           <a href="contact.php"><p>Contact</p></a>
+                           <a href="login.php"><p>Log-in</p></a>
+                        </div>
+                    </div>
   
           <div class="section contact-us">
               <h2>Contact Us</h2>
@@ -353,7 +352,6 @@ select{
                   <p>Email: <span>etherealevents@gmail.com</span></p>
                   <p>Address: <span>Seattle,near Pike Place Market</span></p>
               </div>
-              <textarea placeholder=" your message to us..."></textarea>
           </div>
 
       <div class="footer-copyright">
