@@ -43,8 +43,8 @@ $conn->close();
 
 .form-container {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 40px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -58,7 +58,7 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
+    background-color: green;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -72,6 +72,10 @@ button:hover {
 .error {
     color: red;
     font-size: 14px;
+}
+.register{
+    color: red; 
+    font-weight: bold;
 }
 </style>
 <body>
@@ -93,7 +97,7 @@ button:hover {
 
         <p class="error" id="registerError"></p>
 
-        <p>Already have an account? <a href="login.php">Login here</a>.</p>
+        <p>Already have an account? <a href="login.php" class="register">Log-in here</a></p>
     </div>
 
     <script src="scripts.js"></script>

@@ -40,7 +40,7 @@ $conn->close();
     <style>
         body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #f4f4f4;
     margin: 0;
     display: flex;
     align-items: center;
@@ -50,8 +50,8 @@ $conn->close();
 
 .form-container {
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 50px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
