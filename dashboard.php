@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+function isAuthenticated() {
+    return isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0;
+}
+
+if (!isAuthenticated()) {
+    header('Location: login.php'); 
+    exit();
+}
+
+$userRole = $_SESSION['user_role'] ?? 'guest';
+
+if ($userRole !== 'admin') {
+    echo '<p>Access denied. You do not have permission to view this page.</p>';
+    exit();
+}
+
+include('db_connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,8 +70,6 @@ a:hover {
     <h2>Contact Form Dashboard</h2>
 
     <?php
-    include('db_connection.php');
-
     $query = "SELECT * FROM contact_form";
     $result = $conn->query($query);
 
