@@ -12,14 +12,8 @@
 <body>
 <?php
 session_start();
-
-$user_email = 'yllkakamberi@gmail.com'; 
-$user_id = 4; 
-$user_role = 'admin';
-$_SESSION['user_id'] = $user_id;
-$_SESSION['user_role'] = $user_role;
-$_SESSION['user_email'] = $user_email;
 ?>
+
 
 <header>
     <a href="../index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
@@ -31,16 +25,15 @@ $_SESSION['user_email'] = $user_email;
             <li><a href="gallery.php">GALLERY</a></li>
             <li><a href="contact.php">CONTACT</a></li>
 
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
-                    <li><a href="login/usersdashboard.php">DASHBOARD</a></li>
-                <?php endif; ?>
-                
-                <li><a href="login/logout.php">LOGOUT</a></li>
-            <?php else: ?>
-                <li><a href="login/login.php">LOG-IN</a></li>
-            <?php endif; ?>
-        </ul>
+            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'admin'): ?>
+    <li><a href="login/usersdashboard.php">DASHBOARD</a></li>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['user_id'])): ?>
+    <li><a href="login/logout.php">LOGOUT</a></li>
+<?php else: ?>
+    <li><a href="login/login.php">LOG-IN</a></li>
+<?php endif; ?>
     </nav>
 </header>
     <div class="slideshow-container">
