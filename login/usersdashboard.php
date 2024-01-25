@@ -168,11 +168,15 @@ $conn->close();
                         <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
                         <p><strong>Role:</strong> <?php echo $user['role']; ?></p>
 
-                        <form action="edit_user.php" method="post">
-    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-    <button type="submit" class="edit-button">Edit</button>
-</form>
+        
                        
+                        <form action="new_user.php" method="post">
+    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+    <button type="submit" style="background-color: blue; color: white;">New</button>
+</form>
+
+
+
 
         <form action="delete_user.php" method="post">
     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
