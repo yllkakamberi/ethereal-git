@@ -10,22 +10,39 @@
 
 </style>
 <body>
+<?php
+session_start();
 
-    <header>
-       <a href="index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
-        <nav>
-            <ul>
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="about.php">ABOUT</a></li>
-                <li><a href="services.php">SERVICES</a></li>
-                <li><a href="gallery.php">GALLERY</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
-                <li><a href="http://localhost/ethereal-git/login/login_form.php">LOG-IN</a></li>
-            </ul>
-        </nav>
-    </header>
+$user_email = 'yllkakamberi@gmail.com'; 
+$user_id = 4; 
+$user_role = 'admin';
+$_SESSION['user_id'] = $user_id;
+$_SESSION['user_role'] = $user_role;
+$_SESSION['user_email'] = $user_email;
+?>
 
-   
+<header>
+    <a href="../index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
+    <nav>
+        <ul>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="about.php">ABOUT</a></li>
+            <li><a href="services.php">SERVICES</a></li>
+            <li><a href="gallery.php">GALLERY</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
+
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+                    <li><a href="login/usersdashboard.php">DASHBOARD</a></li>
+                <?php endif; ?>
+                
+                <li><a href="login/logout.php">LOGOUT</a></li>
+            <?php else: ?>
+                <li><a href="login/login.php">LOG-IN</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+</header>
     <div class="slideshow-container">
 
       <div class="mySlides fade">
@@ -127,10 +144,6 @@
       </div>
       
       
-      <div class="ceo">
-        <p id="read-about">-READ MORE ABOUT US-</p>
-       <a href="about.html"><input type="submit" value="ABOUT" class="about-button"></a> 
-      </div>
       <div class="thecouple">
           <div class="ceo-container">
             <div class="ceo-images">
@@ -154,18 +167,7 @@
         </div>
       </div>
 
-      <section>
-        <div class="icons">
-        <a href="https://www.pinterest.com/"><img src="img/pinterest.png" alt=""></a>
-       <a href="https://www.instagram.com/"> <img src="img/instagram.png" alt=""></a>
-       <a href="https://www.google.com/maps/place/Seattle,+WA,+USA/@47.6131554,-122.5068725,11z/data=!3m1!4b1!4m6!3m5!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6061389!4d-122.3328481!16zL20vMGQ5anI?entry=ttu"><img src="img/location.jpg" alt=""></a> 
-        <img src="img/logo.png" alt="" id="log">
-        
-      <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="" style="margin-left: 300px;"></a>  
-       <a href="https://www.tiktok.com/explore"><img src="img/tiktok.png" alt=""></a>         <img src="img/phone.jpg" alt="">
-        
-        </div>
-      </section>
+
       <footer>
             <footer class="footer">
                 <div class="container">
