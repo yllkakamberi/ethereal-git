@@ -40,7 +40,7 @@ $conn->close();
     <style>
         body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: white;
     margin: 0;
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ $conn->close();
 }
 
 .form-container {
-    background-color: #fff;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -65,26 +65,33 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: green;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: green;
 }
 
 .error {
     color: red;
     font-size: 14px;
 }
+.register-link {
+    color: red; 
+    font-weight: bold;
+    
+}
+
+
     </style>
 
 
     <div class="form-container">
-        <h2>Login</h2>
+        <h2>Log in</h2>
         <form action="login.php" method="post">
             <label for="loginEmail">Email:</label>
             <input type="email" id="loginEmail" name="loginEmail" required>
@@ -92,12 +99,14 @@ button:hover {
             <label for="loginPassword">Password:</label>
             <input type="password" id="loginPassword" name="loginPassword" required>
 
-            <button type="submit">Login</button>
+            <button type="submit">Log in</button>
         </form>
 
         <p class="error" id="loginError"></p>
 
-        <p>Don't have an account? <a href="register.php">Register here</a>.</p>
+        <p>Don't have an account? <a href="register.php" class="register-link">Register here</a>.</p>
+
+
     </div>
 
     <script src="scripts.js"></script>
