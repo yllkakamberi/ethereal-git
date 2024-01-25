@@ -70,7 +70,7 @@ $conn->close();
     }
 
     nav a:hover {
-        color: #ffc107;
+        color: grey;
     }
 
     section {
