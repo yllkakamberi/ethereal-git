@@ -58,6 +58,7 @@ $conn->close();
         background-color: #444;
         padding: 10px;
         text-align: center;
+        transition: color 0.1s;
     }
 
     nav a {
@@ -65,7 +66,7 @@ $conn->close();
         text-decoration: none;
         margin: 0 15px;
         font-weight: bold;
-        transition: color 0.3s;
+        transition: color 0.5s;
     }
 
     nav a:hover {
@@ -79,7 +80,7 @@ $conn->close();
     .user-info, .user-list {
         background-color: #fff;
         padding: 20px;
-        border-radius: 8px;
+        border-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
     }
@@ -90,18 +91,18 @@ $conn->close();
         margin-bottom: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition:  box-shadow 0.5s;
         position: relative;
     }
 
     .user-list li:hover {
-        transform: scale(1.05);
+        transform: scale(1.00);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .user-list li .edit-button {
         position: absolute;
-        right: 80px; /* Adjust the position as needed */
+        right: 80px; 
         top: 20px;
     }
 
@@ -120,6 +121,20 @@ $conn->close();
         bottom: 0;
         width: 100%;
     }
+  
+.delete-button {
+    background-color: red;
+    color: white;
+    /* Add more styles as needed */
+}
+
+/* Styles for Edit Button */
+.edit-button {
+    background-color: green;
+    color: white;
+    /* Add more styles as needed */
+}
+
 </style>
 
     <header>
@@ -128,7 +143,7 @@ $conn->close();
 
     <nav>
         <a href="../index.php">Home</a>
-        <a href="logout.php">Logout</a>
+        <a href="logout.php">Log out</a>
     </nav>
 
     <section>
@@ -157,10 +172,18 @@ $conn->close();
     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
     <button type="submit" class="edit-button">Edit</button>
 </form>
-                        <form action="delete_user.php" method="post">
-                            <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                            <button type="submit">Delete</button>
-                        </form>
+                       
+
+        <form action="delete_user.php" method="post">
+    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+    <button type="submit" class="delete-button">Delete</button>
+        </form>
+
+
+        <form action="edit_user.php" method="post">
+    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+    <button type="submit" class="edit-button">Edit</button>
+        </form>
 
                         <hr>
                     </li>
