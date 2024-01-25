@@ -34,86 +34,93 @@ $conn->close();
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <style>
- body, h1, h2, p, ul {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+    body, h1, h2, p, ul {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+    }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
 
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
+    nav {
+        background-color: #444;
+        padding: 10px;
+        text-align: center;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
 
-        nav a:hover {
-            color: #ffc107;
-        }
+    nav a:hover {
+        color: #ffc107;
+    }
 
-        section {
-            margin: 20px;
-        }
+    section {
+        margin: 20px;
+    }
 
-        .user-info, .user-list {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+    .user-info, .user-list {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
 
-        .user-list li {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-        }
+    .user-list li {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+    }
 
-        .user-list li:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+    .user-list li:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
-        .user-list li button {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
+    .user-list li .edit-button {
+        position: absolute;
+        right: 80px; /* Adjust the position as needed */
+        top: 20px;
+    }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }    </style>
+    .user-list li button {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
 
     <header>
         <h1>Welcome to the Admin Dashboard, <?php echo $_SESSION['user_name']; ?>!</h1>
@@ -147,10 +154,9 @@ $conn->close();
                         <p><strong>Role:</strong> <?php echo $user['role']; ?></p>
 
                         <form action="edit_user.php" method="post">
-                            <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                            <button type="submit">Edit</button>
-                        </form>
-
+    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+    <button type="submit" class="edit-button">Edit</button>
+</form>
                         <form action="delete_user.php" method="post">
                             <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
                             <button type="submit">Delete</button>
