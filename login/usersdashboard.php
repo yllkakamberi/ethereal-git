@@ -125,22 +125,16 @@ $conn->close();
 .delete-button {
     background-color: red;
     color: white;
+    /* Add more styles as needed */
 }
 
+/* Styles for Edit Button */
 .edit-button {
     background-color: green;
     color: white;
-}
-.insert-button {
-    background-color: blue;
-    color: white;
-    margin-left:665px;
-    margin-bottom:16px;
+    /* Add more styles as needed */
 }
 
-.insert-button:hover {
-    background-color: navy; 
-}
 </style>
 
     <header>
@@ -163,10 +157,7 @@ $conn->close();
             <?php endif; ?>
             <p><strong>Role:</strong> <?php echo $_SESSION['user_role']; ?></p>
         </div>
-          
-        <form action="insert_users.php" method="post">
-    <button type="submit" class="insert-button">Insert Users</button>
-</form>
+
         <div class="user-list">
             <h2>User List</h2>
             <ul>
@@ -178,7 +169,13 @@ $conn->close();
                         <p><strong>Role:</strong> <?php echo $user['role']; ?></p>
 
         
-    
+                       
+                        <form action="new_user.php" method="post">
+    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+    <button type="submit" style="background-color: blue; color: white;">New</button>
+</form>
+
+
 
 
         <form action="delete_user.php" method="post">

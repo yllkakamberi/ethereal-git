@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+<header>
+    <a href="../index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
+    <nav>
+        <ul>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="about.php">ABOUT</a></li>
+            <li><a href="services.php">SERVICES</a></li>
+            <li><a href="gallery.php">GALLERY</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
+
+            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'admin'): ?>
+    <li><a href="login/usersdashboard.php">DASHBOARD</a></li>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['user_id'])): ?>
+    <li><a href="login/logout.php">LOGOUT</a></li>
+<?php else: ?>
+    <li><a href="login/login.php">LOG-IN</a></li>
+<?php endif; ?>
+    </nav>
+</header>
+
 <style>#about-h2 {
   text-align: center;
   font-size: 26px;
@@ -175,6 +197,9 @@
     
     color: #1b140f;
 }
+.icons{
+  margin-left: 60px;
+}
 
 </style>
 <body>
@@ -216,7 +241,7 @@
 
 
   <div>
-<h2 id="meetteam">-MEET OUR TEAM-</h2> <br>  <div class="arrow" style='font-size:100px;'>&#129027; </div>
+<h2 id="meetteam">-MEET OUR TEAM-</h2> <br>
 </div>
 
 <div class="coordinators">
@@ -296,20 +321,6 @@
 <hr>
 
 
-<section>
-  <div class="icons">
-  <a href="https://www.pinterest.com/"><img src="img/pinterest.png" alt=""></a>
- <a href="https://www.instagram.com/"> <img src="img/instagram.png" alt=""></a>
- <a href="https://www.google.com/maps/place/Seattle,+WA,+USA/@47.6131554,-122.5068725,11z/data=!3m1!4b1!4m6!3m5!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6061389!4d-122.3328481!16zL20vMGQ5anI?entry=ttu"><img src="img/location.jpg" alt=""></a> 
-  <img src="img/logo.png" alt="" id="log">
-  
-<a href="https://www.facebook.com/"><img src="img/facebook.png" alt="" style="margin-left: 300px;"></a>  
- <a href="https://www.tiktok.com/explore"><img src="img/tiktok.png" alt=""></a> 
-  <img src="img/phone.jpg" alt="">
-  
-  </div>
-</section>
-
 <footer>
 <footer class="footer">
                 <div class="container">
@@ -338,6 +349,11 @@
         <p>© 2023 ETHEREAL EVENTS. | FOREVER BEGINS WITH US </p>
       </div>
   </div>
+  <div class="icons">
+              <a href="https://www.instagram.com/"> <img src="img/instagram.png" alt=""></a>
+              <a href="https://www.google.com/maps/place/Seattle,+WA,+USA/@47.6131554,-122.5068725,11z/data=!3m1!4b1!4m6!3m5!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6061389!4d-122.3328481!16zL20vMGQ5anI?entry=ttu"><img src="img/location.jpg" alt=""></a> 
+             <img src="img/phone.jpg" alt="">
+            </div>
 </footer>  
     </body>
     </html>

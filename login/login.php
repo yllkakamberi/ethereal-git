@@ -26,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+
+
 $conn->close();
 ?>
    <!DOCTYPE html>
@@ -104,7 +106,7 @@ button:hover {
 
         <p class="error" id="loginError"></p>
 
-        <p>Don't have an account? <a href="register.php" class="register-link">Register here</a>.</p>
+        <p>Don't have an account? <a href="register.php" class="register-link">Register here</a></p>
 
 
     </div>
