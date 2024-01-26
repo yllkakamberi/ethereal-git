@@ -29,18 +29,55 @@ include('db_connection.php');
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    body {
-    font-family: Arial, sans-serif;
+  body {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-h2 {
-    color: #333;
-}
+header {
+        background-color: white;
+        color: #545151;
+        padding: 10px;
+        text-align: center;
+        font-family: monospace;
+align-items:center;
+    }
+
+nav {
+        background-color: grey;
+        padding: 10px;
+        text-align: center;
+        transition: color 0.1s;
+        font-family:monospace;
+        font-size:14px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.5s;
+    }
+
+    nav a:hover {
+        color: grey;
+    }
+
+
+
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size:13px;
 }
 
 table, th, td {
@@ -53,7 +90,10 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: 	 #e6f2ff;
+    font-family:arial;
+    font-size:14px;
+
 }
 
 a {
@@ -67,8 +107,14 @@ a:hover {
 }
 </style>
 <body>
-    <h2>Contact Form Dashboard</h2>
+<header>
+        <h1>Welcome to the Contact Dashboard, <?php echo $_SESSION['user_name']; ?>!</h1>
+    </header>
 
+    <nav>
+        <a href="../index.php">Home</a>
+        <a href="logout.php">Log out</a>
+    </nav>
     <?php
     $query = "SELECT * FROM contact_form";
     $result = $conn->query($query);

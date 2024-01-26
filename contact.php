@@ -136,7 +136,12 @@ select{
 
      </style>
     
-    <header>
+  
+
+<body>
+  
+
+<header>
     <a href="../index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
     <nav>
         <ul>
@@ -146,20 +151,20 @@ select{
             <li><a href="gallery.php">GALLERY</a></li>
             <li><a href="contact.php">CONTACT</a></li>
 
-            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'admin'): ?>
-    <li><a href="login/usersdashboard.php">DASHBOARD</a></li>
-<?php endif; ?>
-
-<?php if (isset($_SESSION['user_id'])): ?>
-    <li><a href="login/logout.php">LOGOUT</a></li>
-<?php else: ?>
-    <li><a href="login/login.php">LOG-IN</a></li>
-<?php endif; ?>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <?php if ($_SESSION['user_role'] === 'admin'): ?>
+                    <li><a href="login/usersdashboard.php">DASHBOARD 1</a></li>
+                    <li><a href="dashboard.php">DASHBOARD 2</a></li>
+                <?php endif; ?>
+                <li><a href="login/logout.php">LOGOUT</a></li>
+            <?php else: ?>
+                <li><a href="login/login.php">LOG-IN</a></li>
+            <?php endif; ?>
+        </ul>
     </nav>
 </header>
 
-<body>
-  
+
         <div class="formdisplay">
     <div class="contact-image">
         <img src="img/theteam.png" alt="" style="border-radius: 9px;">

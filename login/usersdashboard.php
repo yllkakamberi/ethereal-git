@@ -48,17 +48,21 @@ $conn->close();
     }
 
     header {
-        background-color: #333;
-        color: #fff;
+        background-color: white;
+  color: #545151;
         padding: 20px;
         text-align: center;
+        font-family: monospace;
+
     }
 
     nav {
-        background-color: #444;
+        background-color: grey;
         padding: 10px;
         text-align: center;
         transition: color 0.1s;
+        font-family:monospace;
+        font-size:14px;
     }
 
     nav a {
@@ -123,16 +127,33 @@ $conn->close();
     }
   
 .delete-button {
-    background-color: red;
+    background-color: #ff4d4d;
     color: white;
-    /* Add more styles as needed */
+    font-family:monospace;
+border-radius:8px;
+padding:7px;
+margin-left:4px;
 }
 
-/* Styles for Edit Button */
 .edit-button {
-    background-color: green;
-    color: white;
-    /* Add more styles as needed */
+    background-color: #ccccb3;
+    color:black;
+font-family:monospace;
+border-radius:8px;
+padding:7px;
+margin-right:4px;
+
+
+}
+.insert-button{
+    background-color: #b3d9ff;
+color:black;
+font-family:monospace;
+border-radius:8px;
+padding:7px;
+margin-left:700px;
+margin-top:20px;
+margin-bottom:10px;
 }
 
 </style>
@@ -145,7 +166,9 @@ $conn->close();
         <a href="../index.php">Home</a>
         <a href="logout.php">Log out</a>
     </nav>
-
+    <form action="insert_users.php" method="post">
+    <button type="submit" class="insert-button">Insert Users</button>
+</form>
     <section>
         <div class="user-info">
             <h2>User Information</h2>
@@ -167,16 +190,6 @@ $conn->close();
                         <p><strong>Name:</strong> <?php echo $user['name']; ?></p>
                         <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
                         <p><strong>Role:</strong> <?php echo $user['role']; ?></p>
-
-        
-                       
-                        <form action="new_user.php" method="post">
-    <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-    <button type="submit" style="background-color: blue; color: white;">New</button>
-</form>
-
-
-
 
         <form action="delete_user.php" method="post">
     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
