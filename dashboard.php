@@ -112,7 +112,7 @@ a:hover {
     </header>
 
     <nav>
-        <a href="../index.php">Home</a>
+        <a href="index.php">Home</a>
         <a href="logout.php">Log out</a>
     </nav>
     <?php

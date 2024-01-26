@@ -110,8 +110,7 @@ session_start();
 }
         
         </style>
-        
-        <header>
+<header>
     <a href="index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
     <nav>
         <ul>
@@ -120,9 +119,11 @@ session_start();
             <li><a href="services.php">SERVICES</a></li>
             <li><a href="gallery.php">GALLERY</a></li>
             <li><a href="contact.php">CONTACT</a></li>
+            <li><a href="wedding_locations.php">LOCATIONS</a></li>
 
             <?php if (isset($_SESSION['user_id'])): ?>
                 <?php if ($_SESSION['user_role'] === 'admin'): ?>
+                    <li><a href="add_location.php">ADD LOCATION</a></li>
                     <li><a href="login/usersdashboard.php">DASHBOARD 1</a></li>
                     <li><a href="dashboard.php">DASHBOARD 2</a></li>
                 <?php endif; ?>
