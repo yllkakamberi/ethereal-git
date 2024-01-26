@@ -6,18 +6,27 @@ body {
     color: #333;
 }
 
-header, nav {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+header {
+    background-color: white;
+    color:black;
+    padding: 10px;
     text-align: center;
+    font-family:monospace;
 }
 
+nav{
+    background-color: grey;
+    color:white;
+    padding: 10px;
+    text-align: center;
+    font-family:monospace;
+}
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    font-size:14px;
     transition: color 0.3s;
 }
 
@@ -52,12 +61,13 @@ input {
 }
 
 button {
-    background-color: #333;
-    color: #fff;
+    background-color:  #b3d9ff;
+    color: black;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight:bold;
     transition: background-color 0.3s;
 }
 
@@ -116,14 +126,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </header>
 
     <nav>
-        <a href="admin_dashboard.php">Back to Dashboard</a>
+        <a href="usersdashboard.php">Back to Dashboard</a>
         <a href="logout.php">Logout</a>
     </nav>
 
     <section>
         <form action="update_user.php" method="post">
             <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-            <!-- Add input fields for editing user details -->
             <label for="name">Name:</label>
             <input type="text" name="name" value="<?php echo $user['name']; ?>" required>
             
@@ -133,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="role">Role:</label>
             <input type="text" name="role" value="<?php echo $user['role']; ?>" required>
 
-            <button type="submit">Update</button>
+            <button type="submit">UPDATE</button>
         </form>
     </section>
 

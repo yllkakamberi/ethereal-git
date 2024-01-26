@@ -8,27 +8,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<header>
-    <a href="../index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
-    <nav>
-        <ul>
-            <li><a href="index.php">HOME</a></li>
-            <li><a href="about.php">ABOUT</a></li>
-            <li><a href="services.php">SERVICES</a></li>
-            <li><a href="gallery.php">GALLERY</a></li>
-            <li><a href="contact.php">CONTACT</a></li>
 
-            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'admin'): ?>
-    <li><a href="login/usersdashboard.php">DASHBOARD</a></li>
-<?php endif; ?>
-
-<?php if (isset($_SESSION['user_id'])): ?>
-    <li><a href="login/logout.php">LOGOUT</a></li>
-<?php else: ?>
-    <li><a href="login/login.php">LOG-IN</a></li>
-<?php endif; ?>
-    </nav>
-</header>
 
 <style>#about-h2 {
   text-align: center;
@@ -204,9 +184,11 @@
 </style>
 <body>
 
-
+<?php
+session_start();
+?>
 <header>
-    <a href="../index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
+    <a href="index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
     <nav>
         <ul>
             <li><a href="index.php">HOME</a></li>
@@ -331,7 +313,6 @@
                            <a href="services.php"><p>Services</p></a>
                            <a href="gallery.php"><p>Gallery</p></a>
                            <a href="contact.php"><p>Contact</p></a>
-                           <a href="login.php"><p>Log-in</p></a>
                         </div>
                     </div>
   

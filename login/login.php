@@ -111,7 +111,30 @@ button:hover {
 
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        function validateForm() {
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('loginPassword').value;
+
+            if (email === '' || password === '') {
+                document.getElementById('loginError').innerText = 'Please fill in all fields.';
+                return false;
+            }
+
+            if (!email.includes('@')) {
+                document.getElementById('loginError').innerText = 'Invalid email format.';
+                return false;
+            }
+
+            if (password.length < 8) {
+                document.getElementById('loginError').innerText = 'Password must be at least 8 characters long.';
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
 </body>
 </html>
 

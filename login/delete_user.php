@@ -35,8 +35,8 @@ form {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    width: 300px; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the form */
+    width: 300px; 
+    margin: 0 auto;
 }
 
 button {

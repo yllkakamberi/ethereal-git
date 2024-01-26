@@ -79,9 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             echo "Error: " . $insertSql . "<br>" . $conn->error;
         }
-    } else {
-        echo "Invalid form data.";
-    }
+    } 
 }
 
 $conn->close();
@@ -114,7 +112,6 @@ $conn->close();
     </form>
 </section>
 
-<!-- Your existing code goes here -->
 
 </body>
 </html>

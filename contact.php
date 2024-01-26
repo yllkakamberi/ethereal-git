@@ -139,10 +139,12 @@ select{
   
 
 <body>
-  
+<?php
+session_start();
+?>
 
 <header>
-    <a href="../index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
+    <a href="index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
     <nav>
         <ul>
             <li><a href="index.php">HOME</a></li>
@@ -347,7 +349,6 @@ select{
                            <a href="services.php"><p>Services</p></a>
                            <a href="gallery.php"><p>Gallery</p></a>
                            <a href="contact.php"><p>Contact</p></a>
-                           <a href="login.php"><p>Log-in</p></a>
                         </div>
                     </div>
   

@@ -98,7 +98,7 @@ th {
 
 a {
     text-decoration: none;
-    color: #007BFF;
+    color: #ff0080;
     font-weight: bold;
 }
 

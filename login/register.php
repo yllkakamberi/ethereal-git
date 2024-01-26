@@ -6,30 +6,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['registerEmail'];
     $password = password_hash($_POST['registerPassword'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', 'user')";
+    $stmt = $conn->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, 'user')");
+    $stmt->bind_param("sss", $name, $email, $password);
 
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         header("Location: login.php");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+
+    $stmt->close();
+    $conn->close();
 }
-
-$conn->close();
 ?>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
 <style>
     body {
     font-family: Arial, sans-serif;
@@ -78,11 +68,19 @@ button:hover {
     font-weight: bold;
 }
 </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
- 
     <div class="form-container">
         <h2>Register</h2>
-        <form action="register.php" method="post">
+        <form action="register.php" method="post" onsubmit="return validateForm()">
             <label for="registerName">Name:</label>
             <input type="text" id="registerName" name="registerName" required>
 
@@ -100,6 +98,37 @@ button:hover {
         <p>Already have an account? <a href="login.php" class="register">Log-in here</a></p>
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('registerName').value;
+            var email = document.getElementById('registerEmail').value;
+            var password = document.getElementById('registerPassword').value;
+            var errorElement = document.getElementById('registerError');
+            
+            errorElement.innerText = '';
+
+            if (name === '' || email === '' || password === '') {
+                errorElement.innerText = 'Please fill in all fields.';
+                return false;
+            }
+
+            if (!/^[A-Z][a-z]*$/.test(name)) {
+                errorElement.innerText = 'Name must start with an uppercase letter.';
+                return false;
+            }
+
+            if (!email.includes('@')) {
+                errorElement.innerText = 'Invalid email format.';
+                return false;
+            }
+
+            if (password.length < 8) {
+                errorElement.innerText = 'Password must be at least 8 characters long.';
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
