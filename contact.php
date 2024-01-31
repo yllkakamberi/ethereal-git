@@ -223,17 +223,7 @@ session_start();
  <input type="text" name="location" id="location"><br> <br>
  <label for="">Estimated guest count(required)</label><br>
  <input type="text" name="guests" id="guests"><br> <br>
- <label for="">How did you hear about us?</label><br> <br>
- <select name="" id="">
- <option value="">Word of mouth</option>
- <option value="1">Google</option>
- <option value="2">Wedding wire</option>
- <option value="3">Instagram</option>
- <option value="4">The knot</option>
- <option value="5">Vendor site</option>
- <option value="6">Past wedding event</option>
- <option value="7">Other</option>
-</select><br> <br>
+<br>
 <label for="">What's your drink of choice ?</label><br>
   <p id="littletext">Examples: bubbly, malbec, tea, pepsi, etc.</p> <br>
   <textarea name="drink-choice" id="drink-choice" cols="100" rows="4"></textarea> <br>
@@ -368,13 +358,8 @@ session_start();
         <p>© 2023 ETHEREAL EVENTS. | FOREVER BEGINS WITH US </p>
       </div>
   </div>
-  <div class="icons">
-              <a href="https://www.instagram.com/"> <img src="img/instagram.png" alt=""></a>
-              <a href="https://www.google.com/maps/place/Seattle,+WA,+USA/@47.6131554,-122.5068725,11z/data=!3m1!4b1!4m6!3m5!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6061389!4d-122.3328481!16zL20vMGQ5anI?entry=ttu"><img src="img/location.jpg" alt=""></a> 
-             <img src="img/phone.jpg" alt="">
-            </div>
+ 
 </footer>  
-<!--Validimi i kontakt formes me js-->
 
       </body>
       </html>

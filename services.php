@@ -259,11 +259,7 @@ session_start();
                 </div>
             </div>
 <br>
-            <div class="icons">
-              <a href="https://www.instagram.com/"> <img src="img/instagram.png" alt=""></a>
-              <a href="https://www.google.com/maps/place/Seattle,+WA,+USA/@47.6131554,-122.5068725,11z/data=!3m1!4b1!4m6!3m5!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6061389!4d-122.3328481!16zL20vMGQ5anI?entry=ttu"><img src="img/location.jpg" alt=""></a> 
-             <img src="img/phone.jpg" alt="">
-            </div>
+            
  </footer>  
  
 

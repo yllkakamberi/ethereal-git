@@ -111,7 +111,7 @@ session_start();
       <div class="container-servicesimg">
         <img src="img/after-s.png" alt="Your Photo" class="image-top-services">
         <div class="text-overlay-services">More of our services-take a look at our work here. <br>
-          <a href="services.html"><input type="submit" value="SERVICES" id="services-button"></a>
+          <a href="services.php"><input type="submit" value="SERVICES" id="services-button"></a>
         </div>
       </div>
       
@@ -179,7 +179,7 @@ session_start();
                     </div>
             
                     <div class="section contact-us">
-                      <a href="contact.html" style="text-decoration: none;">  <h2 id="contactus-button">Contact Us</h2></a>
+                    <h2>Contact Us</h2>
                         <div class="contact-info">
                             <p>Phone: <span>+77 443-212-612</span></p>
                             <p>Email: <span>etherealevents@gmail.com</span></p>

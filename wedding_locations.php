@@ -123,5 +123,39 @@ $result = $conn->query($sql);
         $conn->close();
         ?>
     </div>
+
+       
+ <footer>
+        <footer class="footer">
+                <div class="container">
+                    <div class="section-categories">
+                        <h2>Navigation</h2>
+                        <div class="kategorite">
+                           <a href="about.php"><p>About</p></a> 
+                           <a href="services.php"><p>Services</p></a>
+                           <a href="gallery.php"><p>Gallery</p></a>
+                           <a href="contact.php"><p>Contact</p></a>
+                        </div>
+                    </div>
+            
+                    <div class="section contact-us">
+                        <h2>Contact Us</h2>
+                        <div class="contact-info">
+                            <p>Phone: <span>+77 443-212-612</span></p>
+                            <p>Email: <span>etherealevents@gmail.com</span></p>
+                            <p>Address: <span>Seattle,near Pike Place Market</span></p>
+                        </div>
+                    </div>
+          
+                   
+
+                <div class="footer-copyright">
+                  <img src="img/hands-footer.png" alt="" style="width: 450px; height: 200px;">
+                  <p>© 2023 ETHEREAL EVENTS. | FOREVER BEGINS WITH US </p>
+                </div>
+            </div>
+<br>
+            
+ </footer>  
 </body>
 </html>
