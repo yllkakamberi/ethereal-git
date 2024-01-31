@@ -121,7 +121,7 @@ a:hover {
 
     if ($result->num_rows > 0) {
         echo '<table>';
-        echo '<tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Partner First Name</th><th>Partner Last Name</th><th>Pronouns</th><th>Country</th><th>Phone Number</th><th>Email</th><th>Event Date</th><th>Location</th><th>Estimated Guest Count</th><th>Referral Source</th><th>Drink of Choice</th><th>About You</th><th>Action</th></tr>';
+        echo '<tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Partner First Name</th><th>Partner Last Name</th><th>Pronouns</th><th>Country</th><th>Phone Number</th><th>Email</th><th>Event Date</th><th>Location</th><th>Estimated Guest Count</th><th>Drink of Choice</th><th>About You</th><th>Action</th></tr>';
         while ($row = $result->fetch_assoc()) {
             echo '<tr>';
             echo '<td>' . $row['id'] . '</td>';
@@ -136,7 +136,6 @@ a:hover {
             echo '<td>' . $row['event_date'] . '</td>';
             echo '<td>' . $row['location'] . '</td>';
             echo '<td>' . $row['estimated_guest_count'] . '</td>';
-            echo '<td>' . $row['referral_source'] . '</td>';
             echo '<td>' . $row['drink_of_choice'] . '</td>';
             echo '<td>' . $row['about_you'] . '</td>';
             echo '<td><a href="edit_form.php?id=' . $row['id'] . '">Edit</a> | <a href="delete_form.php?id=' . $row['id'] . '">Delete</a></td>';
