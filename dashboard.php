@@ -20,6 +20,8 @@ if ($userRole !== 'admin') {
 include('db_connection.php');
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,10 +68,7 @@ nav {
         color: grey;
     }
 
-
-
-
-table {
+    table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -78,34 +77,34 @@ table {
     border-radius: 10px;
     overflow: hidden;
     font-size:13px;
-}
+    }
 
-table, th, td {
+    table, th, td {
     border: 1px solid #ddd;
-}
+    }
 
-th, td {
+    th, td {
     padding: 12px;
     text-align: left;
-}
+    }
 
-th {
+    th {
     background-color: 	 #e6f2ff;
     font-family:arial;
     font-size:14px;
+    }
 
-}
-
-a {
+    a{
     text-decoration: none;
     color: #ff0080;
     font-weight: bold;
-}
+    }
 
-a:hover {
+    a:hover {
     color: #0056b3;
-}
+    }
 </style>
+
 <body>
 <header>
         <h1>Welcome to the Contact Dashboard, <?php echo $_SESSION['user_name']; ?>!</h1>
@@ -115,7 +114,8 @@ a:hover {
         <a href="index.php">Home</a>
         <a href="login/logout.php">Log out</a>
     </nav>
-    <?php
+
+ <?php
     $query = "SELECT * FROM contact_form";
     $result = $conn->query($query);
 
