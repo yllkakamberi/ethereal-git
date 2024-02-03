@@ -113,7 +113,7 @@ a:hover {
 
     <nav>
         <a href="index.php">Home</a>
-        <a href="logout.php">Log out</a>
+        <a href="login/logout.php">Log out</a>
     </nav>
     <?php
     $query = "SELECT * FROM contact_form";
