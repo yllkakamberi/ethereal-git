@@ -11,8 +11,8 @@ header {
         padding: 10px;
         text-align: center;
         font-family: monospace;
-align-items:center;
-    }
+        align-items:center;
+        }
 
 nav {
         background-color: grey;
@@ -35,41 +35,42 @@ nav {
         color: grey;
     }
 
-h1 {
+    h1 {
     text-align: center;
-}
+        }
 
-form {
+    form {
     max-width: 400px;
     margin: 0 auto;
-}
+    }
 
-label {
+    label {
     display: block;
     margin-top: 10px;
-}
+    }
 
-input,
-textarea,
-button {
+    input,
+    textarea,
+    button {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 10px;
     box-sizing: border-box;
-}
+    }
 
-button {
-    background-color:  #99ddff;
+    button {
+    background-color: green;
     color: black;
     font-family:monospace;
     font-weight:bold;
     cursor: pointer;
-}
+    }
 
-button:hover {
+    button:hover {
     background-color: #45a049;
-}
+    }
+    
 </style>
 
 
