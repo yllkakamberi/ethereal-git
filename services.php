@@ -74,29 +74,34 @@
       display: block;
       margin-top: 10px;
     }
+
     #service-heading{
         margin-top: 45px;
     font-size: 22px;
     font-family: monospace;
     color: rgb(165, 94, 106);
-}
-#service-textp{
+     }
+
+    #service-textp{
     text-align: left;
     font-size: 15px;
     font-family: classico-urw;
     font-weight: 600;
     color: rgb(52, 50, 50);
     line-height: 2;
-}
-.right-box{
+    }
+
+    .right-box{
     width: 1500px;
-}
-.right-box img{
+    }
+
+    .right-box img{
     border-radius: 7px;
-}
-.container-ss{
+    }
+
+    .container-ss{
     margin: 40px;
-}
+    }
 
 @media only screen and (min-width: 768px) {
     .container-ss {

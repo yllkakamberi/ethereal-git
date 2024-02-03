@@ -61,39 +61,40 @@
     font-size: 14px;
     margin-bottom: 20px;
   }
-}   #meetteam {
+}   
+  #meetteam {
             text-align: center;
             font-size: 26px;
             font-family: monospace;
             margin-top: 50px;
             color: #32271f;
             margin-right: 35px;
-        }
+            }
 
-        .arrow {
+  .arrow {
             margin-left: 720px;
             color: #927360;
-        }
+         }
 
-        .coordinators {
+ .coordinators {
             text-align: center;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap; 
-        }
+              }
 
-        .coordinators img {
+  .coordinators img {
             width: 402px;
             height: 396px;
             margin-bottom: 20px;
             border-radius: 9px; 
-        }
+                    }
 
-        .coordinator1,
-        .coordinator2,
-        .coordinator3 {
+ .coordinator1,
+   .coordinator2,
+     .coordinator3 {
             display: inline-block;
-        }
+                  }
 
         .coordinator1 p,
         .coordinator2 p,
@@ -103,16 +104,16 @@
             font-size: 14px;
             margin-left: 20px;
             color: rgb(57, 50, 50);
-        }
+                       }
 
-        .coordinator1 h2,
-        .coordinator2 h2,
-        .coordinator3 h2 {
+  .coordinator1 h2,
+    .coordinator2 h2,
+      .coordinator3 h2 {
           margin-left: 20px;
             font-family: monospace;
             font-size: 19px;
             color: #3c3e33;
-        }
+                        }
 
         @media screen and (max-width: 768px) {
             .coordinators {
@@ -123,25 +124,28 @@
             .coordinators img {
                 width: 100%; 
             }
-        }
+                                           }
     
   .featured{
     margin-top: 30px;
     margin-bottom: 40px;
     background-color: white;
   }
+
   .featured-images{
     background-color: white;
     display: inline;
     justify-content: space-between;
     margin-left: 100px;
   }
+
   .featured-images img{
     align-items: center;
     height: 140px;
     width: 170px;
     margin-left: 33px;
   }
+
   #featured-txt{
     text-align: center;
     font-family: monospace;
@@ -156,27 +160,29 @@
   width: 100%;
   justify-content: space-evenly;
 }
+
 .history-images img{
   height: 500px;
   width: 340px;
   border-radius: 7px;
 }
+
 .about-history p{
   text-align: center;
- /* font-family: classico-urw;*/
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 19px;
   line-height: 2;
   padding: 80px;
   color: rgb(47, 45, 45);
 }
+
 .about-history h2{
-  text-align: center;
+    text-align: center;
     font-family: monospace;
     font-size: 23px;
-    
-    color: #1b140f;
+     color: #1b140f;
 }
+
 .icons{
   margin-left: 60px;
 }

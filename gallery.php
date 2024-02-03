@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,14 +33,14 @@ session_start();
         
         
         .row {
-          display: -ms-flexbox; /* IE10 */
+          display: -ms-flexbox; 
           display: flex;
-          -ms-flex-wrap: wrap; /* IE10 */
+          -ms-flex-wrap: wrap; 
           flex-wrap: wrap;
           padding: 10px;
         }
         
-        /* Create four equal columns that sits next to each other */
+        
         .column {
           -ms-flex: 25%; 
           flex: 25%;
@@ -56,7 +54,6 @@ session_start();
           width: 100%;
         }
         
-        /* Responsive layout - makes a two column-layout instead of four columns */
         @media screen and (max-width: 800px) {
           .column {
             -ms-flex: 50%;
@@ -65,8 +62,6 @@ session_start();
           }
         }
        
-
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
           .column {
             -ms-flex: 100%;
@@ -74,6 +69,7 @@ session_start();
             max-width: 100%;
           }
         }
+
         .text{
             text-align: center;
             font-family: classico-urw ;
@@ -86,31 +82,32 @@ session_start();
             display: flexbox;
             
         }
+
         .footer-imagess{
             text-decoration-color: black;
         }
+
         .text h2{
-            
         text-align: center;
         font-family: monospace;
         font-weight: 600;
         font-size: 25px;
         color: #374710;
         margin-top: 20px;
+        }
 
-
-    }
-    h6{
+         h6{
         font-size: 12px;
         font-weight: 600;
         font-family: monospace
-    }
-    .icons{
-  margin-left: 60px;
-}
+         }
+
+        .icons{
+         margin-left: 60px;
+        }
         
-        </style>
-<header>
+</style>
+      <header>
     <a href="index.php"> <img src="img/logo.png" alt="Your Logo" id="logo"></a>
     <nav>
         <ul>
@@ -135,8 +132,7 @@ session_start();
     </nav>
 </header>
 
-
-          <h1>-OUR PORTOFOLIO-</h1>
+      <h1>-OUR PORTOFOLIO-</h1>
         
           <div class="row"> 
             <div class="column">
@@ -176,12 +172,8 @@ session_start();
               <img src="img/gallb.jpg" style="width:100%">
               <img src="img/ere1.jpg" style="width:100%">
               
-              
-              
-             
-            </div>
           </div>
-
+          </div>
 
       <footer>
       <footer class="footer">
