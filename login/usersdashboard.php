@@ -146,12 +146,12 @@ margin-right:4px;
 
 }
 .insert-button{
-    background-color: #b3d9ff;
+ background-color: #b3d9ff;
 color:black;
 font-family:monospace;
 border-radius:8px;
-padding:7px;
-margin-left:700px;
+padding:10px;
+margin-left:1130px;
 margin-top:20px;
 margin-bottom:10px;
 }

@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
    <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,9 +89,7 @@ button:hover {
     
 }
 
-
     </style>
-
 
     <div class="form-container">
         <h2>Log in</h2>
